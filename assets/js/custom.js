@@ -23,12 +23,12 @@ $(function() {
 	});
 
     $('nav.headnavbar').coreNavigation({
-		menuPosition: "right", // left, right, center, bottom
+		menuPosition: "left", // left, right, center, bottom
 		container: true, // true or false
-		animated: true,
+		animated: false,
 		animatedIn: 'flipInX',
 		animatedOut: 'bounceOut',
-		dropdownEvent: 'click', // Hover, Click & Accordion
+		dropdownEvent: 'hover', // Hover, Click & Accordion
 		onOpenDropdown: function(){
 			console.log('open');
 		},
