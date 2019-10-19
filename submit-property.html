@@ -19,6 +19,18 @@
 		<!-- Custom Color Option -->
 		<link href="assets/css/colors.css" rel="stylesheet">
 		
+		<style>
+			.blink_me {
+  				animation: blinker 1s linear infinite;
+			}
+
+			@keyframes blinker {
+  				50% {
+    				opacity: 0;
+  					}
+			}
+		</style>
+		
     </head>
 	
     <body class="green-skin">
@@ -35,19 +47,55 @@
             <!-- ============================================================== -->
             <!-- Top header  -->
             <!-- ============================================================== -->
-            <!-- Start Navigation -->
-		
+           <!-- Start Navigation -->
 			<div class="header header-light nav-left-side">
 				<nav class="headnavbar">
 					<div class="nav-header">
-						<a href="#" class="brand"><img src="assets/img/logo.png" alt=""/></a>
+						<!-- <a href="#" class="brand"><img src="assets/img/logo.png" alt=""/></a> -->
+						<a href="index.html" ><h2 class="brand" style="margin-top:4px;color: #00ba74;">manajaga</h2></a>
 						<button class="toggle-bar"><span class="ti-align-justify"></span></button>	
 					</div>								
 					<ul class="menu">
 					
-					<ul class="attributes attributes-desk">
+						<li class="dropdown">
+						<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Buy <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Buy</a></li>                                    
+								<li><a href="#">Apartment to Buy</a></li>                                    
+								<li><a href="#">Plot to Buy</a></li>
+								<li><a href="#">Office Space to Buy</a></li> 
+								<li><a href="#">Commercial to Buy</a></li>                                        
+							</ul>                                 
+						</li>
 						
-						<li class="submit-attri theme-log"><a href="dashboard.html">Dashboard</a></li>
+						<li class="dropdown">
+							<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Sell <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Sale</a></li>                                    
+								<li><a href="#">Apartment to Sale</a></li>                                    
+								<li><a href="#">Plot to Sale</a></li>
+								<li><a href="#">Office Space to Sale</a></li> 
+								<li><a href="#">Commercial to Sale</a></li>                                        
+							</ul> 
+						</li>
+
+						<li class="dropdown">
+							<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Rent <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Rent</a></li>                                    
+								<li><a href="#">Apartment to Rent</a></li>                                    
+								<li><a href="#">Plot to Rent</a></li>
+								<li><a href="#">Office Space to Rent</a></li> 
+								<li><a href="#">Commercial to Rent</a></li>                                        
+							</ul> 
+						</li>
+						
+					</ul>
+						
+					<ul class="attributes attributes-desk">
+						<li class="log-icon log-seprate"><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+						<li class="log-icon"><a href="#" data-toggle="modal" data-target="#login">Sign In</a></li>
+						<li class="submit-attri theme-log"><a href="#"> <span class="blink_me">Post / Require Property</span></a></li>
 					</ul>
 					
 				</nav>
@@ -59,7 +107,8 @@
 			<!-- ============================================================== -->
 			
 			<!-- ============================ Page Title Start================================== -->
-			<div class="page-title">
+			<!-- 
+<div class="page-title">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
@@ -71,6 +120,7 @@
 					</div>
 				</div>
 			</div>
+ -->
 			<!-- ============================ Page Title End ================================== -->
 			
 			<!-- ============================ Submit Property Start ================================== -->
@@ -91,8 +141,17 @@
 									<div class="submit-section">
 										<div class="form-row">
 										
+											
+												<div class="form-group col-md-12">
+												 	<input type="checkbox"  name="vehicle" value="Post Property"> &nbsp;&nbsp;Post Property<br>
+												</div>
+											
+												<div class="form-group col-md-12">
+												 	<input type="checkbox" name="vehicle" value="Required Property"> &nbsp;&nbsp;Required Property<br>
+												</div>
+										
 											<div class="form-group col-md-12">
-												<label>Property Title<a href="#" class="tip-topdata" data-tip="Property Title"><i class="ti-help"></i></a></label>
+												<label>Property Title</label>
 												<input type="text" class="form-control">
 											</div>
 											
@@ -351,7 +410,190 @@
 			</section>
 			<!-- ============================ Submit Property End ================================== -->
 			
-		
+		<!-- ============================ Footer Start ================================== -->
+			<footer class="dark-footer skin-dark-footer">
+				<div>
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">About Us</h4></a>
+								</div>
+							</div>		
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Contact Us</h4></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Privacy / Terms</h4></a>
+								</div>
+							</div>
+									
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Feedback</h4></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Follow Us</h4></a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							
+							<div class="col-lg-12 col-md-12 text-center">
+								<p class="mb-0">© 2019 Manajaga. All Rights Reserved</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- ============================ Footer End ================================== -->
+			
+			<!-- Log In Modal -->
+			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="registermodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="registermodal">
+						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Sign In</h4>
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<label>Email</label>
+										<div class="input-with-icon">
+											<input type="text" class="form-control" placeholder="Email">
+											<i class="ti-email"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label>Password</label>
+										<div class="input-with-icon">
+											<input type="password" class="form-control" placeholder="*******">
+											<i class="ti-unlock"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Login</button></a>
+									</div>
+								
+								</form>
+							</div>
+							<div class="modal-divider"><span>Or login via</span></div>
+							<div class="social-login mb-3">
+								<ul>
+									<li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+									<li><a href="#" class="btn connect-twitter"><i class="ti-google"></i>Google</a></li>
+								</ul>
+							</div>
+							<div class="text-center">
+								<p class="mt-5"><a href="#" class="link">Forgot password?</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
+			
+			<!-- Sign Up Modal -->
+			<div class="modal fade signup" id="signup" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="sign-up">
+						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						
+						
+						<div class="modal-body">
+							<h4 class="modal-header-title">Sign Up</h4>
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<div class="input-with-icon">
+											<input type="text" class="form-control" placeholder="Name">
+													<i class="ti-user"></i>
+												</div>
+											</div>
+										
+										
+										
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="email" class="form-control" placeholder="Email">
+													<i class="ti-email"></i>
+												</div>
+											</div>
+									
+										
+										
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="password" class="form-control" placeholder="Password">
+													<i class="ti-unlock"></i>
+												</div>
+											</div>
+									
+										
+									
+									<div class="col-lg-12 col-md-12">
+										<div class="row">
+											<div class="col-lg-3 col-md-3">
+												<div class="form-group row">
+												  <div class="input-with-icon">
+													<select class="form-control">
+														<option value="+91" selected="selected">IND +91</option>
+													</select>
+												</div>
+											 </div>
+										</div>
+										
+										<div class="col-lg-9 col-md-9" style="padding-right: 0px;">
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="number" class="form-control" placeholder="Mobile Number">
+													<i class="lni-phone-handset"></i>
+												</div>
+											</div>
+										</div>
+										</div>
+										</div>
+
+									<div class="form-group">
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Sign Up</button></a>
+									</div>
+								
+								</form>
+							</div>
+							<div class="modal-divider"><span>Or login via</span></div>
+							
+							<div class="social-login mb-3">
+								<ul>
+									<li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
+									<li><a href="#" class="btn connect-twitter"><i class="ti-google"></i>Google</a></li>
+								</ul>
+							</div>
+
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
 			
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 			

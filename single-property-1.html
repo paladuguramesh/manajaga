@@ -19,6 +19,17 @@
 		<!-- Custom Color Option -->
 		<link href="assets/css/colors.css" rel="stylesheet">
 		
+		<style>
+			.blink_me {
+  				animation: blinker 1s linear infinite;
+			}
+
+			@keyframes blinker {
+  				50% {
+    				opacity: 0;
+  					}
+			}
+		</style>
     </head>
 	
     <body class="green-skin">
@@ -37,55 +48,54 @@
             <!-- Top header  -->
             <!-- ============================================================== -->
             <!-- Start Navigation -->
-			<div class="top-header">
-				<div class="container">
-					<div class="row">
-					
-						<div class="col-lg-6 col-md-6">
-							<div class="cn-info">
-								<ul>
-									<li><i class="lni-phone-handset"></i>(+1) 123 123 1234</li>
-									<li><i class="ti-email"></i>support@xxxx.com</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6">
-							<ul class="top-social">
-								<li><a href="#"><i class="lni-facebook"></i></a></li>
-								<li><a href="#"><i class="lni-linkedin"></i></a></li>
-								<li><a href="#"><i class="lni-instagram"></i></a></li>
-								<li><a href="#"><i class="lni-twitter"></i></a></li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
-			</div>
 			<div class="header header-light nav-left-side">
 				<nav class="headnavbar">
 					<div class="nav-header">
-						<a href="home.html" class="brand"><img src="assets/img/logo.png" alt=""/></a>
+						<!-- <a href="#" class="brand"><img src="assets/img/logo.png" alt=""/></a> -->
+						<a href="index.html" ><h2 class="brand" style="margin-top:4px;color: #00ba74;">manajaga</h2></a>
 						<button class="toggle-bar"><span class="ti-align-justify"></span></button>	
 					</div>								
 					<ul class="menu">
 					
-						<li>
-							<a href="home.html">Home</a>
+						<li class="dropdown">
+						<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Buy <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Buy</a></li>                                    
+								<li><a href="#">Apartment to Buy</a></li>                                    
+								<li><a href="#">Plot to Buy</a></li>
+								<li><a href="#">Office Space to Buy</a></li> 
+								<li><a href="#">Commercial to Buy</a></li>                                        
+							</ul>                                 
 						</li>
 						
-						<li>
-							<a href="about.html">About Us</a>
+						<li class="dropdown">
+							<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Sell <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Sale</a></li>                                    
+								<li><a href="#">Apartment to Sale</a></li>                                    
+								<li><a href="#">Plot to Sale</a></li>
+								<li><a href="#">Office Space to Sale</a></li> 
+								<li><a href="#">Commercial to Sale</a></li>                                        
+							</ul> 
 						</li>
-						
-						<li>
-							<a href="contact.html">Contact Us</a>
+
+						<li class="dropdown">
+							<a href="JavaScript:Void(0);" class="dropdown-toggle" data-toggle="dropdown">Rent <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Independent House to Rent</a></li>                                    
+								<li><a href="#">Apartment to Rent</a></li>                                    
+								<li><a href="#">Plot to Rent</a></li>
+								<li><a href="#">Office Space to Rent</a></li> 
+								<li><a href="#">Commercial to Rent</a></li>                                        
+							</ul> 
 						</li>
 						
 					</ul>
 						
 					<ul class="attributes attributes-desk">
-						<li class="log-icon log-seprate"><a href="#" data-toggle="modal" data-target="#login">Log In</a></li>
-						<li class="log-icon"><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+						<li class="log-icon log-seprate"><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+						<li class="log-icon"><a href="#" data-toggle="modal" data-target="#login">Sign In</a></li>
+						<li class="submit-attri theme-log"><a href="submit-property.html"> <span class="blink_me">Post / Require Property</span></a></li>
 					</ul>
 					
 				</nav>
@@ -344,68 +354,32 @@
 					<div class="container">
 						<div class="row">
 							
-							<div class="col-lg-3 col-md-6">
+							<div class="col-lg-2 col-md-2">
 								<div class="footer-widget">
-									<h4 class="widget-title">About Workio</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" class="other-store-link">
-										<div class="other-store-app">
-											<div class="os-app-icon">
-												<i class="ti-android"></i>
-											</div>
-											<div class="os-app-caps">
-												Google Store
-											</div>
-										</div>
-									</a>
+									<a href="#"><h4 class="widget-title">About Us</h4></a>
 								</div>
 							</div>		
-							<div class="col-lg-3 col-md-6">
+							<div class="col-lg-2 col-md-2">
 								<div class="footer-widget">
-									<h4 class="widget-title">Useful links</h4>
-									<ul class="footer-menu">
-										<li><a href="#">Link 1</a></li>
-										<li><a href="#">Link 2</a></li>
-										<li><a href="#">Link 3</a></li>
-										<li><a href="#">Link 4</a></li>
-										<li><a href="#">Link 5</a></li>
-									</ul>
-								</div>
-							</div>
-									
-							<div class="col-lg-3 col-md-6">
-								<div class="footer-widget">
-									<h4 class="widget-title">Get in Touch</h4>
-									<div class="fw-address-wrap">
-										<div class="fw fw-location">
-											469 Ann Rd, Lake Charles, LA 70605
-										</div>
-										<div class="fw fw-mail">
-											support@xxxx.com
-										</div>
-										<div class="fw fw-call">
-											(+1) 123 123 1234
-										</div>
-										
-									</div>
+									<a href="#"><h4 class="widget-title">Contact Us</h4></a>
 								</div>
 							</div>
 							
-							<div class="col-lg-3 col-md-6">
+							<div class="col-lg-2 col-md-2">
 								<div class="footer-widget">
-									<h4 class="widget-title">Follow Us</h4>
-									<p>Follow & Subscribe your email to get new business tips.</p>
-									<ul class="footer-bottom-social">
-										<li><a href="#"><i class="ti-facebook"></i></a></li>
-										<li><a href="#"><i class="ti-twitter"></i></a></li>
-										<li><a href="#"><i class="ti-instagram"></i></a></li>
-										<li><a href="#"><i class="ti-linkedin"></i></a></li>
-									</ul>
+									<a href="#"><h4 class="widget-title">Privacy / Terms</h4></a>
+								</div>
+							</div>
 									
-									<form class="f-newsletter mt-4">
-										<input type="email" class="form-control sigmup-me" placeholder="Your Email Address" required="required">
-										<button type="submit" class="btn"><i class="ti-arrow-right"></i></button>
-									</form>
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Feedback</h4></a>
+								</div>
+							</div>
+							
+							<div class="col-lg-2 col-md-2">
+								<div class="footer-widget">
+									<a href="#"><h4 class="widget-title">Follow Us</h4></a>
 								</div>
 							</div>
 							
@@ -418,7 +392,7 @@
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2019 Rikada. All Rights Reserved</p>
+								<p class="mb-0">© 2019 Manajaga. All Rights Reserved</p>
 							</div>
 							
 						</div>
@@ -433,15 +407,15 @@
 					<div class="modal-content" id="registermodal">
 						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
 						<div class="modal-body">
-							<h4 class="modal-header-title">Log In</h4>
+							<h4 class="modal-header-title">Sign In</h4>
 							<div class="login-form">
 								<form>
 								
 									<div class="form-group">
-										<label>User Name</label>
+										<label>Email</label>
 										<div class="input-with-icon">
-											<input type="text" class="form-control" placeholder="Username">
-											<i class="ti-user"></i>
+											<input type="text" class="form-control" placeholder="Email">
+											<i class="ti-email"></i>
 										</div>
 									</div>
 									
@@ -454,7 +428,7 @@
 									</div>
 									
 									<div class="form-group">
-										<a href="dashboard.html"><button type="button" class="btn btn-md full-width pop-login">Login</button></a>
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Login</button></a>
 									</div>
 								
 								</form>
@@ -480,89 +454,79 @@
 				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
 					<div class="modal-content" id="sign-up">
 						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						
+						
 						<div class="modal-body">
 							<h4 class="modal-header-title">Sign Up</h4>
 							<div class="login-form">
 								<form>
-									
-									<div class="row">
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="text" class="form-control" placeholder="Full Name">
+								
+									<div class="form-group">
+										<div class="input-with-icon">
+											<input type="text" class="form-control" placeholder="Name">
 													<i class="ti-user"></i>
 												</div>
 											</div>
-										</div>
 										
-										<div class="col-lg-6 col-md-6">
+										
+										
 											<div class="form-group">
 												<div class="input-with-icon">
 													<input type="email" class="form-control" placeholder="Email">
 													<i class="ti-email"></i>
 												</div>
 											</div>
-										</div>
+									
 										
-										<div class="col-lg-6 col-md-6">
+										
 											<div class="form-group">
 												<div class="input-with-icon">
-													<input type="text" class="form-control" placeholder="Username">
-													<i class="ti-user"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="password" class="form-control" placeholder="*******">
+													<input type="password" class="form-control" placeholder="Password">
 													<i class="ti-unlock"></i>
 												</div>
 											</div>
+									
+										
+									
+									<div class="col-lg-12 col-md-12">
+										<div class="row">
+											<div class="col-lg-3 col-md-3">
+												<div class="form-group row">
+												  <div class="input-with-icon">
+													<select class="form-control">
+														<option value="+91" selected="selected">IND +91</option>
+													</select>
+												</div>
+											 </div>
 										</div>
 										
-										<div class="col-lg-6 col-md-6">
+										<div class="col-lg-9 col-md-9" style="padding-right: 0px;">
 											<div class="form-group">
 												<div class="input-with-icon">
-													<input type="password" class="form-control" placeholder="123 546 5847">
+													<input type="number" class="form-control" placeholder="Mobile Number">
 													<i class="lni-phone-handset"></i>
 												</div>
 											</div>
 										</div>
-										
-										<div class="col-lg-6 col-md-6">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<select class="form-control">
-														<option>As a Customer</option>
-														<option>As a Agent</option>
-														
-													</select>
-												
-												</div>
-											</div>
 										</div>
-										
-									</div>
-									
+										</div>
+
 									<div class="form-group">
-										<a href="dashboard.html"><button type="button" class="btn btn-md full-width pop-login">Sign Up</button></a>
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Sign Up</button></a>
 									</div>
 								
 								</form>
 							</div>
 							<div class="modal-divider"><span>Or login via</span></div>
+							
 							<div class="social-login mb-3">
 								<ul>
 									<li><a href="#" class="btn connect-fb"><i class="ti-facebook"></i>Facebook</a></li>
 									<li><a href="#" class="btn connect-twitter"><i class="ti-google"></i>Google</a></li>
 								</ul>
 							</div>
-							<div class="text-center">
-								<p class="mt-5"><i class="ti-user mr-1"></i>Already Have An Account? <a href="#" class="link">Go For LogIn</a></p>
-							</div>
+
+						
 						</div>
 					</div>
 				</div>
