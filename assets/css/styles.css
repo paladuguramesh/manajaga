@@ -7904,7 +7904,7 @@ footer.skin-dark-footer ul.footer-bottom-social li a:hover, footer.skin-dark-foo
 		float: none;
 	}
 	nav .brand {
-		top: 7px;
+		/*top: 7px;*/
 	}
 	li.login-attri a {
 		height: 42px;
