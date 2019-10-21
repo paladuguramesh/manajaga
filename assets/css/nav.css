@@ -288,7 +288,7 @@ Core Navigation
     float: left; }
   .core-nav .wrap-core-nav-list {
     width: 100%;
-    min-height: 300px;
+    max-height: 400px;
     overflow: auto;
     left: 0;
     margin-top: -100vh;
@@ -775,7 +775,7 @@ Dropdown
     left: 100%; }
 
 .core-nav .wrap-core-nav-list.right .dropdown > .dropdown-menu {
-    right: 0;
+	/*right: 0;*/
     left: initial;  }
   .core-nav .wrap-core-nav-list.right .dropdown > .dropdown-menu .dropdown > .dropdown-menu {
     top: 0;
@@ -817,11 +817,11 @@ Dropdown
 
 @media (max-width: 920px) {
   .core-nav .dropdown .dropdown-menu {
-    position: relative !important;
+    position: relative ;
     width: 100%;
     border: 0;
     padding-left: 15px;
-    top: -43px !important;
+    top: 0px !important;
     left: 0 !important;
     right: 0 !important; }
   .core-nav ul.attributes .dropdown .dropdown-menu {
