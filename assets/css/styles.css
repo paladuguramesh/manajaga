@@ -3066,7 +3066,7 @@ nav .brand {
 	display: block;
 	position: relative;
 	width:180px;
-	top:16px;
+	top:23px;
 }
 
 nav .brand img {
@@ -8142,7 +8142,7 @@ th.expire-date {
 		padding: 0 20px!important;
 	}
 	nav .brand {
-		top: 14px;
+		top: 0px;
 	}
 	.core-content .brand img {
 		max-width: 125px;
