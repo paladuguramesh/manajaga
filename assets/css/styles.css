@@ -2596,7 +2596,7 @@ a.btn-trans-video i {
 }
 /*----------- Global Settings: Custom Checkbox & Radio Button ----------------*/
 .checkbox-custom, .radio-custom {
-opacity: 0;
+opacity: 1;
 position: absolute;   
 }
 
@@ -8281,4 +8281,12 @@ a.goodgreen-theme {
 }
 a.blue2-theme {
     background:#0176ff !important;
+}
+.blink_me {
+  	animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  		50% {
+    		opacity: 0;
+  		}
 }
