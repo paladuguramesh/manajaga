@@ -14,3 +14,20 @@ $("#builder").change(function(){
     $("#agent").prop("checked", false);
 });
 // Signup options
+
+
+// Post / Required Property options
+$("#PostProperty").change(function(){
+    $("#RequiredProperty").prop("checked", false);
+    
+    $("#form-postproperty").show();
+    $("#form-requiredproperty").hide();
+});
+
+$("#RequiredProperty").change(function(){
+    $("#PostProperty").prop("checked", false);
+    
+    $("#form-postproperty").hide();
+    $("#form-requiredproperty").show();
+});
+// Post / Required Property options
