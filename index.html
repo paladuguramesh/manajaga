@@ -1163,7 +1163,7 @@
 							</div>
 							
 							<div class="text-center">
-								<p class="mt-5"><a href="#" class="link">Forgot password?</a></p>
+								<p class="mt-5"><a href="#" class="link" id="forgotpassword">Forgot password?</a></p>
 							</div>
 						</div>
 					</div>
@@ -1286,6 +1286,40 @@
 			</div>
 			<!-- End Modal -->
 			
+			<!-- ForgotPassword Modal -->
+			<div class="modal fade" id="forgotpasswordm" tabindex="-1" role="dialog" aria-labelledby="forgotpasswordmodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="forgotpassword">
+						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Forgot Password</h4>
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<label>Enter email we will send a link to reset your password.</label>
+									</div>
+								
+									<div class="form-group">
+										<label>Email</label>
+										<div class="input-with-icon">
+											<input type="text" class="form-control" placeholder="Email">
+											<i class="ti-user"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Submit</button></a>
+									</div>
+								
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
+			
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 			
 
@@ -1319,6 +1353,13 @@
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->
+
+		<script>
+			$("#forgotpassword").click(function(){
+				$("#login").modal('hide');
+				$("#forgotpasswordm").modal('show');
+			});
+		</script>
 
 	</body>
 

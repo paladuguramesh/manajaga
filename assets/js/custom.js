@@ -260,6 +260,11 @@ $(function() {
 		allowClear: false
 	});
 	
+	$('#price').select2({
+		placeholder: "Price",
+		allowClear: false
+	});
+	
 	$('#floors1').select2({
 		placeholder: "Total Floors",
 		allowClear: false

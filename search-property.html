@@ -279,7 +279,7 @@
 							
 							<div class="row">
 							
-								<div class="col-lg-4 col-md-4">
+								<div class="col-lg-4 col-md-3">
 									<div class="form-group">
 										<div class="input-with-icon">
 											<input type="text" class="form-control" placeholder="Address, School, City, Zip or Neighborhood">
@@ -288,59 +288,65 @@
 									</div>
 								</div>
 								
-								<div class="col-lg-2 col-md-2">
-										<div class="form-group">
-											<div class="input-with-icon">
-												<select class="form-control">
-													<option value="">Price</option>
-												</select>
-											</div>
-										</div>
+								<div class="form-group col-md-2">
+									<select id="price"  class="form-control">
+										<option value="">Price</option>
+									</select>
 								</div>
 								
-								<div class="col-lg-2 col-md-2">
-										<div class="form-group">
-											<div class="input-with-icon">
-												<select class="form-control">
-													<option value="">Property Type</option>
-													<option value="1">Any Type</option>
-													<option value="2">For Buy</option>
-													<option value="3">For Sale</option>
-													<option value="2">For Rental</option>
+								<div class="form-group col-md-2">
+												
+												<select id="ptypes" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Villa">Villa</option>
+													<option value="Apartment">Apartment</option>
+													<option value="Commercial Shop">Commercial Shop</option>
+													<option value="Commercial Land">Commercial Land</option>
+													<option value="Commercial Office Space">Commercial Office Space</option>
+													<option value="Residential House">Residential House</option>
+													<option value="Residential Plot">Residential Plot</option>
+													<option value="PentHouse">PentHouse</option>
+													<option value="Warehouse">Warehouse</option>
+													<option value="Industrial Land">Industrial Land</option>
+													<option value="Industrial Building">Industrial Building</option>
+													<option value="Agriculture Land">Agriculture Land</option>
+													<option value="Farm House">Farm House</option>
 												</select>
 											</div>
-										</div>
-								</div>
 								
-									<div class="col-lg-2 col-md-2">
-										<div class="form-group">
-											<div class="input-with-icon">
-												<select class="form-control">
-													<option value="">Bedrooms</option>
+									<div class="form-group col-md-2">
+												
+												<select id="bedrooms" class="form-control">
+													<option value="">&nbsp;</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
 												</select>
 											</div>
-										</div>
-									</div>
-									
-									<div class="col-lg-2 col-md-2">
-										<div class="form-group">
-											<div class="input-with-icon">
-												<select class="form-control">
-													<option value="">Bathrooms</option>
+											
+											<div class="form-group col-md-2">
+												
+												<select id="bathrooms" class="form-control">
+													<option value="">&nbsp;</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
 												</select>
 											</div>
-										</div>
-									</div>
 								
 							</div>
 							
@@ -968,6 +974,40 @@
 			</div>
 			<!-- End Modal -->
 			
+			<!-- ForgotPassword Modal -->
+			<div class="modal fade" id="forgotpasswordm" tabindex="-1" role="dialog" aria-labelledby="forgotpasswordmodal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered login-pop-form" role="document">
+					<div class="modal-content" id="forgotpassword">
+						<span class="mod-close" data-dismiss="modal" aria-hidden="true"><i class="ti-close"></i></span>
+						<div class="modal-body">
+							<h4 class="modal-header-title">Forgot Password</h4>
+							<div class="login-form">
+								<form>
+								
+									<div class="form-group">
+										<label>Enter email we will send a link to reset your password.</label>
+									</div>
+								
+									<div class="form-group">
+										<label>Email</label>
+										<div class="input-with-icon">
+											<input type="text" class="form-control" placeholder="Email">
+											<i class="ti-user"></i>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<a href="#"><button type="button" class="btn btn-md full-width pop-login">Submit</button></a>
+									</div>
+								
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Modal -->
+			
 			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 			
 
@@ -998,6 +1038,13 @@
 		<script src="assets/js/cl-switch.js"></script>
 		
 		<script src="assets/js/manajaga.js"></script>
+		
+		<script>
+			$("#forgotpassword").click(function(){
+				$("#login").modal('hide');
+				$("#forgotpasswordm").modal('show');
+			});
+		</script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->
