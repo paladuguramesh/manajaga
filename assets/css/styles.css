@@ -3397,13 +3397,13 @@ li.login-attri .account-drop a {
 }
 .hero-search h1 {
     text-transform: capitalize;
-    color: #2b4db9 !important;
+    color: #2b4db9;
 	font-size:35px;
 }
 .btn.search-btn {
     background: #fd5332;
-    padding: 8px;
-    border-radius:5px;
+    padding: 9px;
+    border-radius: 0px 5px 5px 0px;
     box-shadow: 0 5px 24px rgba(31, 37, 59, 0.15);
     color: #ffffff;
     width: 100%;
@@ -7460,12 +7460,13 @@ ul.social li a {
     max-width: 185px;
 }
 .footer-widget {
-    padding: 50px 0;
+    padding: 30px 10px 0;
+    text-align: center;
 }
 h4.widget-title {
     margin-bottom: 20px;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
     letter-spacing:1.5px;
 }
 .footer-widget ul {
@@ -8289,4 +8290,106 @@ a.blue2-theme {
   		50% {
     		opacity: 0;
   		}
+}
+
+.ml--5{
+	margin-left:-5px;
+}
+
+.all-ind{
+	width:800px;
+	}
+	
+#newCityBarHeaderContainer {
+    cursor: auto;
+    padding:15px;
+}
+
+#newCityBarHeaderContainer .listTitle {
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#newCityBarHeaderContainer .listCategories {
+    margin-top: 20px;
+    line-height: 24px;
+    display: flow-root;
+}
+
+#newCityBarHeaderContainer .listCategories>span {
+    color: #999;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#newCityBarHeaderContainer .listCategories ul, #newCityBarHeaderContainer .listCategories ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#newCityBarHeaderContainer input[type=text].cityListSearch {
+    position: absolute;
+    left: 545px;
+    top: 10px;
+    border: 1px solid #ccc;
+    color: #333;
+    width: 240px;
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 2px!important;
+    box-shadow: none;
+}
+#newCityBarHeaderContainer .listCategories ul li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    width: 110px;
+    color: #333;
+    padding: 0 20px 0 0;
+    vertical-align: top;
+}
+
+#newCityBarHeaderContainer a {
+    color: inherit;
+        padding: 0;
+    font-size: 12px;
+}
+
+#newCityBarHeaderContainer .listCategories {
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+#newCityBarHeaderContainer .listCategories>span {
+    color: #999;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#newCityBarHeaderContainer .listCategories ul.col7 {
+    column-count: 7;
+}
+
+#newCityBarHeaderContainer .searchCityIcn {
+    background-position: -151px -262px;
+    position: absolute;
+    top: 21px;
+    left: 759px;
+}
+
+#newCityBarHeaderContainer .citySearchResults {
+    position: absolute;
+    left: 544px;
+    top: 43px;
+    width: 240px;
+    padding: 5px 0;
+    border: 1px solid #e1e1e1;
+    max-height: 250px;
+    overflow-y: auto;
 }

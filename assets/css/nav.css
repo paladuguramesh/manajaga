@@ -750,7 +750,7 @@ Dropdown
 .core-nav .dropdown {
   position: relative; }
   .core-nav .dropdown .dropdown-menu {
-    display: none; }
+    /*display: none; */}
   .core-nav .dropdown > .dropdown-menu {
     width: 230px;
     background: #fff;
