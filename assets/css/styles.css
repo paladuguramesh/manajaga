@@ -1873,8 +1873,8 @@ a.btn-trans-video i {
 	transition:all ease 0.4s;
 }
 .btn-theme-2{
-	background:#3151B7;
-	border-color:#3151B7;
+	background:#265077;
+	border-color:#265077;
 	color:#ffffff;
 	transition:all ease 0.4s;
 }
@@ -1897,17 +1897,17 @@ a.btn-trans-video i {
     border-color:#fd5332;
 }
 .btn-outline-theme-2 {
-    color:#3151B7;
+    color:#265077;
     background-color: transparent;
-    border:2px solid #3151B7;
+    border:2px solid #265077;
     -webkit-transition: 0.2s ease-in;
     -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
 }
 .btn-outline-theme-2:hover, .btn-outline-theme-2:focus {
     color:#ffffff;
-    background-color:#3151B7;
-    border-color:#3151B7;
+    background-color:#265077;
+    border-color:#265077;
 }
 .btn-secondary,
 .btn-secondary.disabled {
@@ -4852,15 +4852,15 @@ span.tag_t {
 .property-listing.property-2 .list-status {
     position: relative;
     margin-left: 10px;
-    top: -3px;
+    top: -2px;
     z-index: 2;
     width: 20px;
     height: 20px;
-    background: #022140;
+    background: #265077;
     text-align: center;
     border-radius: 50%;
-    font-size: 9px;
-    line-height: 22px;
+    font-size: 16px;
+    font-weight: 900;
     color: #ffffff;
     box-shadow: none;
     display: inline-block;
@@ -5274,7 +5274,7 @@ span.tag_t {
 	height:40px;
 	opacity:0;
     line-height:40px;
-    background:#3151B7;
+    background:#265077;
     font-size:12px;
     color: #ffffff;
     cursor: pointer;
@@ -5380,7 +5380,7 @@ span.tag_t {
     margin: 0;
 }
 .nav-tabs .nav-link {
-    background: #3151B7;
+    background: #265077;
     color: #ffffff;
     border-radius: .22rem;
     margin-right: 10px;
@@ -5669,7 +5669,7 @@ span.tag_t {
 	transform: translateY(-50%);
 	left: -50px;
 	width: 50px;
-	background-color:#3151b7;
+	background-color:#265077;
 	color: #fff;
 	border-radius: 3px 0 0 3px;
 	text-align: center;
@@ -5699,7 +5699,7 @@ span.tag_t {
     border-radius: 3px;
 }
 .csm-buttons a.button.btn-compare, .csm-buttons a.button.reset:hover {
-    background-color:#3151B7;
+    background-color:#265077;
     color:#ffffff;
 }
 .csm-buttons a.button.btn-reset, .csm-buttons a.button.reset:hover {
@@ -6947,7 +6947,7 @@ h3.pa-name {
     float: left;
 }
 .client-info h5{
-    color: #3151b7;
+    color: #265077;
 	font-size:16px;
 }
 .client-info .small-font{
@@ -7131,7 +7131,7 @@ h3.pa-name {
 	height:40px;
 	display:inline-block;
     line-height:40px;
-    background:#3151B7;
+    background:#265077;
     font-size:12px;
     color: #ffffff;
     cursor: pointer;
