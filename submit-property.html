@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-        <title>Rikada - Powerful Residence Real Estate Template</title>
+        <title>Manajaga</title>
 		
         <!-- All Plugins Css -->
         <link rel="stylesheet" href="assets/css/plugins.css">
@@ -104,16 +104,16 @@
 				<div class="container">
 					<div class="row">
 						
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<input type="radio" class="checkbox-custom" value="PostProperty" id="PostProperty" name="PostProperty">
 							<label for="PostProperty" class="checkbox-custom-label">Post Property</label>
 						</div>
 											
-						<div class="form-group col-md-12">
+						<div class="form-group col-md-6">
 							<input type="radio" class="checkbox-custom" value="RequiredProperty" id="RequiredProperty" name="RequiredProperty">
-							<label for="RequiredProperty" class="checkbox-custom-label">Required Property</label>
+							<label for="RequiredProperty" class="checkbox-custom-label">Require Property</label>
 						</div>
-												
+											
 						<!-- Submit Form -->
 						<div class="col-lg-12 col-md-12">
 						<form id="form-postproperty">
@@ -121,45 +121,118 @@
 								
 								<!-- Basic Information -->
 								<div class="form-submit">	
-									<h3>Basic Information</h3>
+									<h3>Post Property</h3>
 									<div class="submit-section">
 										<div class="form-row">
 										
-											<div class="form-group col-md-12">
-												<label>Property Title</label>
+										<div class="form-group col-md-12">
+											<label>I am</label>		
+										</div>
+										
+										<div class="col-lg-12 col-md-12">
+										<div class="row">
+											<div class="col-lg-3 col-md-3">
+												<div class="form-group row">
+												  <div class="input-with-icon">
+													<input type="radio" class="checkbox-custom" value="Owner" id="pp_owner" name="pp_owner">
+													<label for="pp_owner" class="checkbox-custom-label">Owner</label>
+												</div>
+											 </div>
+										</div>
+										
+										<div class="col-lg-3 col-md-3" style="padding-right: 0px;">
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="radio" class="checkbox-custom" value="Builder" id="pp_builder" name="pp_builder">
+													<label for="pp_builder" class="checkbox-custom-label">Builder</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-3 col-md-3" style="padding-right: 0px;">
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="radio" class="checkbox-custom" value="Broker" id="pp_broker" name="pp_broker">
+													<label for="pp_broker" class="checkbox-custom-label">Broker</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="col-lg-3 col-md-3" style="padding-right: 0px;">
+											<div class="form-group">
+												<div class="input-with-icon">
+													<input type="radio" class="checkbox-custom" value="All" id="pp_all" name="pp_all">
+													<label for="pp_all" class="checkbox-custom-label">All</label>
+												</div>
+											</div>
+										</div>
+										
+										</div>
+										</div>
+										
+										</div>
+									</div>
+								</div>
+								
+								<!-- Contact Information -->
+								<div class="form-submit">	
+									<h3>Contact Information</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+											<div class="form-group col-md-6">
+												<label>First Name</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Last Name</label>
 												<input type="text" class="form-control">
 											</div>
 											
 											<div class="form-group col-md-6">
-												<label>Status</label>
-												<select id="status" class="form-control">
-													<option value="">&nbsp;</option>
-													<option value="1">For Rent</option>
-													<option value="2">For Sale</option>
-												</select>
+												<label>Email</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Phone Number</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<!-- Property Information -->
+								<div class="form-submit">	
+									<h3>Property Information</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+											<div class="form-group col-md-6">
+												<label>Property Title</label>
+												<input type="text" class="form-control">
 											</div>
 											
 											<div class="form-group col-md-6">
 												<label>Property Type</label>
 												<select id="ptypes" class="form-control">
 													<option value="">&nbsp;</option>
-													<option value="1">Houses</option>
-													<option value="2">Apartment</option>
-													<option value="3">Villas</option>
-													<option value="4">Commercial</option>
-													<option value="5">Offices</option>
-													<option value="6">Garage</option>
+													<option value="Villa">Villa</option>
+													<option value="Apartment">Apartment</option>
+													<option value="Commercial Shop">Commercial Shop</option>
+													<option value="Commercial Land">Commercial Land</option>
+													<option value="Commercial Office Space">Commercial Office Space</option>
+													<option value="Residential House">Residential House</option>
+													<option value="Residential Plot">Residential Plot</option>
+													<option value="PentHouse">PentHouse</option>
+													<option value="Warehouse">Warehouse</option>
+													<option value="Industrial Land">Industrial Land</option>
+													<option value="Industrial Building">Industrial Building</option>
+													<option value="Agriculture Land">Agriculture Land</option>
+													<option value="Farm House">Farm House</option>
 												</select>
-											</div>
-											
-											<div class="form-group col-md-6">
-												<label>Price</label>
-												<input type="text" class="form-control" placeholder="INR">
-											</div>
-											
-											<div class="form-group col-md-6">
-												<label>Area</label>
-												<input type="text" class="form-control">
 											</div>
 											
 											<div class="form-group col-md-6">
@@ -171,6 +244,11 @@
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
 												</select>
 											</div>
 											
@@ -183,12 +261,176 @@
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
 												</select>
 											</div>
 											
+											<div class="form-group col-md-6">
+												<label>Balconies</label>
+												<select id="balconies" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Other Rooms</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Pooja Room" id="PoojaRoom" name="PoojaRoom">
+												<label for="PoojaRoom" class="checkbox-custom-label">Pooja Room</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Study Room" id="StudyRoom" name="StudyRoom">
+												<label for="StudyRoom" class="checkbox-custom-label">Study Room</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Others" id="Others" name="Others">
+												<label for="Others" class="checkbox-custom-label">Others</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Total Floors</label>
+												<select id="floors" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Furniture</label>
+												<select id="furniture" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Furnished">Furnished</option>
+													<option value="UnFurnished">UnFurnished</option>
+													<option value="SemiFurnished">SemiFurnished</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Area</label>
+												<select id="area" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Sq-ft">Sq-ft</option>
+													<option value="Sq-yrd">Sq-yrd</option>
+													<option value="Sq-m">Sq-m</option>
+													<option value="Acre">Acre</option>
+													<option value="Bigha">Bigha</option>
+													<option value="Hectare">Hectare</option>
+													<option value="Marla">Marla</option>
+													<option value="Kanal">Kanal</option>
+													<option value="Biswa1">Biswa1</option>
+													<option value="Biswa2">Biswa2</option>
+													<option value="Aankadam">Aankadam</option>
+													<option value="Rood">Rood</option>
+													<option value="Chatak">Chatak</option>
+													<option value="Kottah">Kottah</option>
+													<option value="Perch">Perch</option>
+													<option value="Guntha">Guntha</option>
+													<option value="Are">Are</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Trade Type</label>
+											</div>
+											
+        									<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="New Property" id="NewProperty" name="NewProperty">
+												<label for="NewProperty" class="checkbox-custom-label">New Property</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="Resale" id="Resale" name="Resale">
+												<label for="Resale" class="checkbox-custom-label">Resale</label>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Possession</label>
+											</div>
+											
+        									<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="Under Construction" id="UnderConstruction" name="UnderConstruction">
+												<label for="UnderConstruction" class="checkbox-custom-label">Under Construction</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="Ready to Move" id="ReadyToMove" name="ReadyToMove">
+												<label for="ReadyToMove" class="checkbox-custom-label">Ready to Move</label>
+											</div>
+        
+											<div class="form-group col-md-6">
+												<label>Total Price (INR)</label>
+												<input type="text" class="form-control">
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Parking Available</label>
+											</div>
+											
+        									<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="Yes" id="ParkingYes" name="ParkingYes">
+												<label for="ParkingYes" class="checkbox-custom-label">Yes</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="No" id="ParkingNo" name="ParkingNo">
+												<label for="ParkingNo" class="checkbox-custom-label">No</label>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Response From</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Only Owners" id="OnlyOwners" name="OnlyOwners">
+												<label for="OnlyOwners" class="checkbox-custom-label">Only Owners</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Only Builders" id="Onlybuilders" name="Onlybuilders">
+												<label for="Onlybuilders" class="checkbox-custom-label">Only Builders</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Only Brokers" id="OnlyBrokers" name="OnlyBrokers">
+												<label for="OnlyBrokers" class="checkbox-custom-label">Only Brokers</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="All" id="all" name="all">
+												<label for="all" class="checkbox-custom-label">All</label>
+											</div>
+
 										</div>
 									</div>
 								</div>
+								
 								
 								<!-- Gallery -->
 								<div class="form-submit">	
@@ -250,127 +492,11 @@
 												<label>Description</label>
 												<textarea class="form-control h-120"></textarea>
 											</div>
-											
-											<div class="form-group col-md-4">
-												<label>Building Age (optional)</label>
-												<select id="bage" class="form-control">
-													<option value="">&nbsp;</option>
-													<option value="1">0 - 5 Years</option>
-													<option value="2">0 - 10Years</option>
-													<option value="3">0 - 15 Years</option>
-													<option value="4">0 - 20 Years</option>
-													<option value="5">20+ Years</option>
-												</select>
-											</div>
-											
-											<div class="form-group col-md-4">
-												<label>Garage (optional)</label>
-												<select id="garage" class="form-control">
-													<option value="">&nbsp;</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-												</select>
-											</div>
-											
-											<div class="form-group col-md-4">
-												<label>Rooms (optional)</label>
-												<select id="rooms" class="form-control">
-													<option value="">&nbsp;</option>
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-												</select>
-											</div>
-											
-											<div class="form-group col-md-12">
-												<label>Other Features (optional)</label>
-												<div class="o-features">
-													<ul class="no-ul-list third-row">
-														<li>
-															<input id="a-1" class="checkbox-custom" name="a-1" type="checkbox">
-															<label for="a-1" class="checkbox-custom-label">Air Condition</label>
-														</li>
-														<li>
-															<input id="a-2" class="checkbox-custom" name="a-2" type="checkbox">
-															<label for="a-2" class="checkbox-custom-label">Bedding</label>
-														</li>
-														<li>
-															<input id="a-3" class="checkbox-custom" name="a-3" type="checkbox">
-															<label for="a-3" class="checkbox-custom-label">Heating</label>
-														</li>
-														<li>
-															<input id="a-4" class="checkbox-custom" name="a-4" type="checkbox">
-															<label for="a-4" class="checkbox-custom-label">Internet</label>
-														</li>
-														<li>
-															<input id="a-5" class="checkbox-custom" name="a-5" type="checkbox">
-															<label for="a-5" class="checkbox-custom-label">Microwave</label>
-														</li>
-														<li>
-															<input id="a-6" class="checkbox-custom" name="a-6" type="checkbox">
-															<label for="a-6" class="checkbox-custom-label">Smoking Allow</label>
-														</li>
-														<li>
-															<input id="a-7" class="checkbox-custom" name="a-7" type="checkbox">
-															<label for="a-7" class="checkbox-custom-label">Terrace</label>
-														</li>
-														<li>
-															<input id="a-8" class="checkbox-custom" name="a-8" type="checkbox">
-															<label for="a-8" class="checkbox-custom-label">Balcony</label>
-														</li>
-														<li>
-															<input id="a-9" class="checkbox-custom" name="a-9" type="checkbox">
-															<label for="a-9" class="checkbox-custom-label">Icon</label>
-														</li>
-														<li>
-															<input id="a-10" class="checkbox-custom" name="a-10" type="checkbox">
-															<label for="a-10" class="checkbox-custom-label">Wi-Fi</label>
-														</li>
-														<li>
-															<input id="a-11" class="checkbox-custom" name="a-11" type="checkbox">
-															<label for="a-11" class="checkbox-custom-label">Beach</label>
-														</li>
-														<li>
-															<input id="a-12" class="checkbox-custom" name="a-12" type="checkbox">
-															<label for="a-12" class="checkbox-custom-label">Parking</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-											
+										
 										</div>
 									</div>
 								</div>
 								
-								<!-- Contact Information -->
-								<div class="form-submit">	
-									<h3>Contact Information</h3>
-									<div class="submit-section">
-										<div class="form-row">
-										
-											<div class="form-group col-md-4">
-												<label>Name</label>
-												<input type="text" class="form-control">
-											</div>
-											
-											<div class="form-group col-md-4">
-												<label>Email</label>
-												<input type="text" class="form-control">
-											</div>
-											
-											<div class="form-group col-md-4">
-												<label>Phone (optional)</label>
-												<input type="text" class="form-control">
-											</div>
-											
-										</div>
-									</div>
-								</div>
 								
 								<div class="form-group col-lg-12 col-md-12">
 									<button class="btn btn-theme" type="submit">Submit & Preview</button>
@@ -381,6 +507,258 @@
 						
 						<form id="form-requiredproperty">
 							
+							<!-- Basic Information -->
+								<div class="form-submit">	
+									<h3>Require Property</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+										</div>
+									</div>
+								</div>
+								
+								<!-- Contact Information -->
+								<div class="form-submit">	
+									<h3>Contact Information</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+											<div class="form-group col-md-6">
+												<label>First Name</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Last Name</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Email</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Phone Number</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								<!-- Property Information -->
+								<div class="form-submit">	
+									<h3>Property Information</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+											<div class="form-group col-md-6">
+												<label>Property Title</label>
+												<input type="text" class="form-control">
+											</div>
+										
+											
+											<div class="form-group col-md-6">
+												<label>Property Type</label>
+												<select id="ptypes" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Villa">Villa</option>
+													<option value="Apartment">Apartment</option>
+													<option value="Commercial Shop">Commercial Shop</option>
+													<option value="Commercial Land">Commercial Land</option>
+													<option value="Commercial Office Space">Commercial Office Space</option>
+													<option value="Residential House">Residential House</option>
+													<option value="Residential Plot">Residential Plot</option>
+													<option value="PentHouse">PentHouse</option>
+													<option value="Warehouse">Warehouse</option>
+													<option value="Industrial Land">Industrial Land</option>
+													<option value="Industrial Building">Industrial Building</option>
+													<option value="Agriculture Land">Agriculture Land</option>
+													<option value="Farm House">Farm House</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Bedrooms</label>
+												<select id="bedrooms" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Bathrooms</label>
+												<select id="bathrooms" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Balconies</label>
+												<select id="balconies" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Other Rooms</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Pooja Room" id="PoojaRoom" name="PoojaRoom">
+												<label for="PoojaRoom" class="checkbox-custom-label">Pooja Room</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Study Room" id="StudyRoom" name="StudyRoom">
+												<label for="StudyRoom" class="checkbox-custom-label">Study Room</label>
+											</div>
+											
+											<div class="form-group col-md-3">
+												<input type="checkbox" class="checkbox-custom" value="Others" id="Others" name="Others">
+												<label for="Others" class="checkbox-custom-label">Others</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Total Floors</label>
+												<select id="floors" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Furniture</label>
+												<select id="furniture" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Furnished">Furnished</option>
+													<option value="UnFurnished">UnFurnished</option>
+													<option value="SemiFurnished">SemiFurnished</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Area</label>
+												<select id="area" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="Sq-ft">Sq-ft</option>
+													<option value="Sq-yrd">Sq-yrd</option>
+													<option value="Sq-m">Sq-m</option>
+													<option value="Acre">Acre</option>
+													<option value="Bigha">Bigha</option>
+													<option value="Hectare">Hectare</option>
+													<option value="Marla">Marla</option>
+													<option value="Kanal">Kanal</option>
+													<option value="Biswa1">Biswa1</option>
+													<option value="Biswa2">Biswa2</option>
+													<option value="Aankadam">Aankadam</option>
+													<option value="Rood">Rood</option>
+													<option value="Chatak">Chatak</option>
+													<option value="Kottah">Kottah</option>
+													<option value="Perch">Perch</option>
+													<option value="Guntha">Guntha</option>
+													<option value="Are">Are</option>
+												</select>
+											</div>
+											
+											
+											<div class="form-group col-md-6">
+												<label>Price Range (INR)</label>
+												<input type="text" class="form-control" >
+											</div>
+											
+											<div class="form-group col-md-12">
+												<label>Parking Available</label>
+											</div>
+											
+        									<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="Yes" id="ParkingYes" name="ParkingYes">
+												<label for="ParkingYes" class="checkbox-custom-label">Yes</label>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<input type="radio" class="checkbox-custom" value="No" id="ParkingNo" name="ParkingNo">
+												<label for="ParkingNo" class="checkbox-custom-label">No</label>
+											</div>
+											
+
+										</div>
+									</div>
+								</div>
+								
+								<!-- Location -->
+								<div class="form-submit">	
+									<h3>Location</h3>
+									<div class="submit-section">
+										<div class="form-row">
+										
+											<div class="form-group col-md-6">
+												<label>Address</label>
+												<input type="text" class="form-control">
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>City</label>
+												<input type="text" class="form-control">
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>State</label>
+												<input type="text" class="form-control">
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Zip Code</label>
+												<input type="text" class="form-control">
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+									<div class="form-group col-lg-12 col-md-12">
+									<button class="btn btn-theme" type="submit">Submit & Preview</button>
+								</div>
+								
 						</form>	
 						</div>
 						

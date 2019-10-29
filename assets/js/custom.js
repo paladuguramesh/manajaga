@@ -201,19 +201,43 @@ $(function() {
 	// Select Bedrooms
 	$('#bedrooms').select2({
 		placeholder: "Bedrooms",
-		allowClear: true
+		allowClear: false
 	});
 	
 	// Select Bathrooms
 	$('#bathrooms').select2({
 		placeholder: "Bathrooms",
-		allowClear: true
+		allowClear: false
+	});
+	
+	// Select Balconies
+	$('#balconies').select2({
+		placeholder: "Balconies",
+		allowClear: false
 	});
 	
 	// Select Property Types
 	$('#ptypes').select2({
 		placeholder: "Property Types",
-		allowClear: true
+		allowClear: false
+	});
+	
+	// Select Furniture
+	$('#furniture').select2({
+		placeholder: "Select Furniture",
+		allowClear: false
+	});
+	
+	// Select Total Floors
+	$('#floors').select2({
+		placeholder: "Total Floors",
+		allowClear: false
+	});
+	
+	// Select Area
+	$('#area').select2({
+		placeholder: "Select Area",
+		allowClear: false
 	});
 	
 	// Select Cities
