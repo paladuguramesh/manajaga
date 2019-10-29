@@ -204,8 +204,18 @@ $(function() {
 		allowClear: false
 	});
 	
+	$('#bedrooms1').select2({
+		placeholder: "Bedrooms",
+		allowClear: false
+	});
+	
 	// Select Bathrooms
 	$('#bathrooms').select2({
+		placeholder: "Bathrooms",
+		allowClear: false
+	});
+	
+	$('#bathrooms1').select2({
 		placeholder: "Bathrooms",
 		allowClear: false
 	});
@@ -216,8 +226,19 @@ $(function() {
 		allowClear: false
 	});
 	
+	$('#balconies1').select2({
+		placeholder: "Balconies",
+		allowClear: false
+	});
+	
 	// Select Property Types
 	$('#ptypes').select2({
+		placeholder: "Property Types",
+		allowClear: false
+	});
+	
+	// Select Property Types
+	$('#ptypes1').select2({
 		placeholder: "Property Types",
 		allowClear: false
 	});
@@ -228,14 +249,29 @@ $(function() {
 		allowClear: false
 	});
 	
+	$('#furniture1').select2({
+		placeholder: "Select Furniture",
+		allowClear: false
+	});
+	
 	// Select Total Floors
 	$('#floors').select2({
 		placeholder: "Total Floors",
 		allowClear: false
 	});
 	
+	$('#floors1').select2({
+		placeholder: "Total Floors",
+		allowClear: false
+	});
+	
 	// Select Area
 	$('#area').select2({
+		placeholder: "Select Area",
+		allowClear: false
+	});
+	
+	$('#area1').select2({
 		placeholder: "Select Area",
 		allowClear: false
 	});
