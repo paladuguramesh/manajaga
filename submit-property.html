@@ -48,7 +48,7 @@
 					<li>
 						<div>
   							<a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    							All India
+    							India
   							</a>
   						<div class="dropdown-menu all-ind" aria-labelledby="dropdownMenuButton" id="citylistheader">
   						<div id="newCityBarHeaderContainer">
@@ -251,7 +251,7 @@
 						</li>
 						
 						<li>
-							<a href="properties.html">Services</a>
+							<a href="#">Services</a>
 						</li>
 						
 					</ul>
@@ -325,16 +325,7 @@
 											<div class="form-group">
 												<div class="input-with-icon">
 													<input type="radio" class="checkbox-custom" value="Broker" id="pp_broker" name="pp_broker">
-													<label for="pp_broker" class="checkbox-custom-label">Broker</label>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-3 col-md-3" style="padding-right: 0px;">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="radio" class="checkbox-custom" value="All" id="pp_all" name="pp_all">
-													<label for="pp_all" class="checkbox-custom-label">All</label>
+													<label for="pp_broker" class="checkbox-custom-label">Agent/Broker</label>
 												</div>
 											</div>
 										</div>
@@ -481,6 +472,7 @@
 												<label>Total Floors</label>
 												<select id="floors" class="form-control">
 													<option value="">&nbsp;</option>
+													<option value="0">0</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -525,6 +517,18 @@
 													<option value="Perch">Perch</option>
 													<option value="Guntha">Guntha</option>
 													<option value="Are">Are</option>
+												</select>
+											</div>
+											
+											<div class="form-group col-md-6">
+												<label>Building Age</label>
+												<select id="bage" class="form-control">
+													<option value="">&nbsp;</option>
+													<option value="1">0 - 5 Years</option>
+													<option value="2">5 - 10Years</option>
+													<option value="3">10 - 15 Years</option>
+													<option value="4">15 - 20 Years</option>
+													<option value="5">20+ Years</option>
 												</select>
 											</div>
 											
@@ -825,6 +829,7 @@
 												<label>Total Floors</label>
 												<select id="floors1" class="form-control">
 													<option value="">&nbsp;</option>
+													<option value="0">0</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
@@ -1087,6 +1092,8 @@
 												  <div class="input-with-icon">
 													<select class="form-control">
 														<option value="+91" selected="selected">IND +91</option>
+														<option value="+1">USA +1</option>
+														<option value="+61">AUS +61</option>
 													</select>
 												</div>
 											 </div>
@@ -1120,7 +1127,7 @@
 											<div class="form-group">
 												<div class="input-with-icon">
 													<input type="radio" class="checkbox-custom" value="Agent" id="agent" name="agent">
-													<label for="agent" class="checkbox-custom-label">Agent</label>
+													<label for="agent" class="checkbox-custom-label">Agent/Broker</label>
 												</div>
 											</div>
 										</div>

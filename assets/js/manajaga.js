@@ -20,7 +20,8 @@ $("#builder").change(function(){
 
 
 /*** Post/Required Property options ***/
-$("#form-postproperty").hide();
+$("#form-postproperty").show();
+$("#PostProperty").prop("checked", true);
 $("#form-requiredproperty").hide();
 
 $("#PostProperty").change(function(){

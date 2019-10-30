@@ -308,7 +308,7 @@ $(function() {
 	// Select Rooms
 	$('#bage').select2({
 		placeholder: "Select An Option",
-		allowClear: true
+		allowClear: false
 	});
 	
 	// Home Slider

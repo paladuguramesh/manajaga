@@ -4707,12 +4707,12 @@ form.search-big-form.search-shadow, form.search-form.search-shadow {
 }
 .sb-date {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 10px;
+    left: 10px;
     display: inline-block;
     background:rgba(23, 42, 76, 0.4);
     color: #ffffff;
-    padding: 8px 15px;
+    padding: 6px 10px;
     border-radius: 50px;
     font-size: 14px;
 }
@@ -4728,6 +4728,14 @@ span.tag_t {
     background: #22326b;
     border-radius: 4px;
     color: #ffffff;
+}
+h1.tag_price {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 25px;
 }
 .proerty_content {
 	position:relative;
@@ -5252,6 +5260,7 @@ span.tag_t {
     opacity:1;
     transition: 0.1s;
 	z-index:1;
+	display: none !important;
 }
 .slick-next:before {
     content:"\e628";
