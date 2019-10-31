@@ -5040,7 +5040,7 @@ h1.tag_price {
 	border-color:#ff9800;
 }
 .price-features-wrapper {
-    padding: 0.1rem 1.5rem 0.6rem;
+    padding:0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -5065,9 +5065,12 @@ h1.tag_price {
     padding-left: 18px;
     position: relative;
     vertical-align: top;
-    width: 50%;
-    flex: 0 0 50%;
-    margin-bottom: 1.5rem;
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 8px;
+}
+.listing-card-info-icon span{
+	margin-right:10px;
 }
 .inc-fleat.inc-bed:before {
 	background:url(../img/bed.svg);
