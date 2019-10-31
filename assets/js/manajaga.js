@@ -1,3 +1,46 @@
+/*** Change Blink Text ***/
+$( document ).ready(function() {
+	var text = ["Post / Require Property", "Free"];
+	var counter = 0;
+	var elem = document.getElementById("blink_me");
+	var inst = setInterval(change, 1000);
+
+	function change() {
+		var txt = text[counter];
+		if(txt == "Free") {
+			 
+			 
+			 
+			 $('.create-new-post').attr('style', 'background-color: #f1d600 !important');
+			 
+			 elem.classList.add("text-danger");
+			 elem.style.fontWeight = "bolder";
+			 elem.style.fontSize = "20px";
+			 
+		} else {
+		 	
+			
+			
+			$('.create-new-post').attr('style', 'background-color: #ffffff !important');
+			
+			elem.classList.remove("text-danger");
+		 	elem.style.fontWeight = "normal";
+		 	elem.style.fontSize = "16px";
+			
+		}
+  		elem.innerHTML = txt;
+  		counter++;
+  		if (counter >= text.length) {
+    		counter = 0;
+  		}
+	}
+});
+/*** Change Blink Text ***/
+
+
+
+
+
 /*** Signup options ***/
 $("#buyer").change(function(){
     $("#agent").prop("checked", false);

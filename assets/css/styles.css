@@ -8292,7 +8292,8 @@ a.goodgreen-theme {
 a.blue2-theme {
     background:#0176ff !important;
 }
-.blink_me {
+
+/*.blink_me {
   	animation: blinker 1s linear infinite;
 }
 @keyframes blinker {
@@ -8300,6 +8301,7 @@ a.blue2-theme {
     		opacity: 0;
   		}
 }
+*/
 
 .ml--5{
 	margin-left:-5px;
@@ -8401,4 +8403,8 @@ a.blue2-theme {
     border: 1px solid #e1e1e1;
     max-height: 250px;
     overflow-y: auto;
+}
+.create-new-post{
+	width: 240px;
+	text-align: center;
 }
