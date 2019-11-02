@@ -1706,6 +1706,7 @@ ul.list-style-none li a:hover {
 	-o-transition: 0s;
 	transition: 0s;
 	border-radius:0.1rem;
+	background: #efefef;
 }
 a.btn-trans-video{
     font-size: 1em;
@@ -2898,12 +2899,12 @@ outline:none;
     font-size:17px;
     box-shadow: none;
 	padding:.5rem .75rem;
-    border:1px solid #e0ecf5;
+    border:1px solid #b9b9b9;
 	background-clip: initial;
 }
 .submit-form .form-control, .submit-page .form-control, .form-submit .form-control{
     background: #f9fafc;
-    border: 1px solid #ebedf5;
+    border: 1px solid #d2d2d2;
     border-radius: 3px;
 	color: #646e77;
 }
@@ -3010,7 +3011,7 @@ opacity: 1;
     border-radius: 0;
     border: none;
     height: 56px;
-    border: 1px solid #ebedf5;
+    border: 1px solid #d2d2d2;
     border-radius: 4px;
     padding-left: 15px;
 }
@@ -8410,4 +8411,14 @@ a.blue2-theme {
 .create-new-post{
 	width: 240px;
 	text-align: center;
+}
+.step_ml-3{
+	margin-left:25%;
+	margin-top:30px;
+}
+
+@media only screen and (max-width:768px) {
+	.step_ml-3{
+		margin-left:0%;
+	}
 }
