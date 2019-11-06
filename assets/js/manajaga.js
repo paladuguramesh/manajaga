@@ -139,7 +139,22 @@ $("#ReadyToMove").change(function(){
 });
 /*** Possession ***/
 
+/*** Property Details ***/
+$("#Sale").change(function(){
+    $("#Rent").prop("checked", false);
+    $("#PG").prop("checked", false);
+});
 
+$("#Rent").change(function(){
+    $("#Sale").prop("checked", false);
+    $("#PG").prop("checked", false);
+});
+
+$("#PG").change(function(){
+     $("#Sale").prop("checked", false);
+    $("#Rent").prop("checked", false);
+});
+/*** Property Details ***/
 
 
 

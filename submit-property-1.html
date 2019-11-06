@@ -261,6 +261,9 @@
 					</ul>
 						
 					<ul class="attributes attributes-desk">
+						<li>
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPropertyModal">Launch wizard modal</button>
+						</li>
 						<li class="log-icon log-seprate"><a href="#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
 						<li class="log-icon"><a href="#" data-toggle="modal" data-target="#login">Sign In</a></li>
 						<li class="submit-attri theme-log">
@@ -276,38 +279,41 @@
 			<!-- Top header  -->
 			<!-- ============================================================== -->
 			
-			<!-- ============================ Submit Property Start ================================== -->
-			<section>
-			
-				<div class="container">
+			<!-- ============================  Property Modal ================================== -->
+		
 				
-					<div class="">
+					<div class="modal fade" id="myPropertyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					
-						<div class="stepwizard col-lg-offset-3">
+					 <div class="modal-dialog modal-dialog-property" role="document">
+    					<div class="modal-content">
+    					<span class="mod-close" data-dismiss="modal" aria-hidden="true" id="btnPropertyClosePopup"><i class="ti-close"></i></span>
+						
+						<div class="modal-body">
+
+							<h4 class="modal-header-title">Post / Require Property</h4>
+					
+							<div class="stepwizard col-lg-offset-3">
     						<div class="stepwizard-row setup-panel">
       							
       							<div class="stepwizard-step">
         							<a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
         							<p>Choose Option</p>
       							</div>
+      							
       							<div class="stepwizard-step">
         							<a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-        							<p>Basic Info</p>
+        							<p>User Info</p>
       							</div>
       							<div class="stepwizard-step">
         							<a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-        							<p>Contact Info</p>
-      							</div>
-      							<div class="stepwizard-step">
-        							<a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
         							<p>Property Info</p>
       							</div>
       							<div class="stepwizard-step">
-        							<a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+        							<a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
         							<p>Gallery</p>
       							</div>
       							<div class="stepwizard-step">
-        							<a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+        							<a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
         							<p>Location</p>
       							</div>
       							
@@ -315,9 +321,9 @@
   					</div>
   
   
-  	<form role="form" action="" method="post">
+  							<form role="form" action="" method="post">
     
-    <div class="row setup-content" id="step-1">
+    							<div class="row setup-content" id="step-1">
   
  		<div class="col-lg-12 col-md-12">
 			<div class="panel panel-primary">
@@ -339,14 +345,14 @@
 		</div>
 </div>
     
-    <div class="row setup-content" id="step-2">
+    							<div class="row setup-content" id="step-2">
      <div class="col-lg-12 col-md-12">
 			<div class="panel panel-primary">
-      			<div class="panel-heading">Basic Info</div>
+      			<div class="panel-heading">User Information</div>
       			<div class="panel-body">
- 			<div class="form-submit">	
-									
-									<div class="submit-section">
+     	<div class="form-submit">	
+     	
+     	<div class="submit-section">
 										<div class="form-row">
 										
 										<div class="form-group col-md-12">
@@ -389,25 +395,6 @@
 									
 									
       								</div>
-      								</div>
-									
-        </div>
-        <div class="panel-footer">
-      									<div class="pull-right">
-      										<button class="btn btn-previous prevBtn" type="button" >Previous</button>
-          									<button class="btn btn-theme-2 nextBtn" type="button" >Next</button>
-      									</div>
-	 </div>
-	  </div>
-	   </div>
-	    </div>
-	
-    <div class="row setup-content" id="step-3">
-     <div class="col-lg-12 col-md-12">
-			<div class="panel panel-primary">
-      			<div class="panel-heading">Contact Information</div>
-      			<div class="panel-body">
-     	<div class="form-submit">	
 								
 									<div class="submit-section">
 										<div class="form-row">
@@ -445,7 +432,7 @@
       								</div>
 			</div></div></div>					
         
-    <div class="row setup-content" id="step-4">
+    							<div class="row setup-content" id="step-3">
    <div class="col-lg-12 col-md-12">
 			<div class="panel panel-primary">
       			<div class="panel-heading">Property Information</div>
@@ -701,7 +688,7 @@
 								</div>
 								</div>								
 
- 	<div class="row setup-content" id="step-5">
+ 								<div class="row setup-content" id="step-4">
  	<div class="col-lg-12 col-md-12">
 			<div class="panel panel-primary">
       			<div class="panel-heading">Gallery</div>
@@ -736,7 +723,7 @@
     </div>    
     </div>  
     
-    <div class="row setup-content" id="step-6">
+    							<div class="row setup-content" id="step-5">
   <div class="col-lg-12 col-md-12">
 			<div class="panel panel-primary">
       			<div class="panel-heading">Location</div>
@@ -782,17 +769,15 @@
       </div>
        </div>
     
-  </form>
+  						</form>
   
-</div>  
-  					</div>
-  
-				</div>
-						
-			</section>
-			
-			
-			<!-- ============================ Submit Property End ================================== -->
+  						</div> 
+  					</div> 
+  			</div> 
+  </div> 
+				
+				
+			<!-- ============================ End Property Modal ================================== -->
 			
 		<!-- ============================ Footer Start ================================== -->
 			<footer class="dark-footer skin-dark-footer">
