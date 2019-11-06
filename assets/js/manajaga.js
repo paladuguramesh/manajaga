@@ -67,11 +67,22 @@ $("#form-postproperty").show();
 $("#PostProperty").prop("checked", true);
 $("#form-requiredproperty").hide();
 
+$("#property-info-title").text("Post Property");
+$("#property-details-post").show();
+$("#property-details-require").hide();
+
 $("#PostProperty").change(function(){
     $("#RequiredProperty").prop("checked", false);
     
     $("#form-postproperty").show();
     $("#form-requiredproperty").hide();
+    
+    ///
+    $("#property-details-post").show();
+	$("#property-details-require").hide();
+    $("#post-section").show();
+    $("#require-section").hide();
+    $("#property-info-title").text("Post Property");
 });
 
 $("#RequiredProperty").change(function(){
@@ -79,10 +90,80 @@ $("#RequiredProperty").change(function(){
     
     $("#form-postproperty").hide();
     $("#form-requiredproperty").show();
+    
+     ///
+     $("#property-details-post").hide();
+	$("#property-details-require").show();
+    $("#post-section").hide();
+    $("#require-section").show();
+    $("#property-info-title").text("Require Property");
 });
 /*** Post / Required Property options ***/
 
+/*** Property Details Post ***/
+$("#Sale").change(function(){
+    $("#Rent").prop("checked", false);
+    $("#PG").prop("checked", false);
+    
+    $("#property-info-subtitle").text("Sale");
+     $("#post-sale").show();
+      $("#post-rent").hide();
+    $("#post-pg").hide();
+});
 
+$("#Rent").change(function(){
+    $("#Sale").prop("checked", false);
+    $("#PG").prop("checked", false);
+    
+     $("#property-info-subtitle").text("Rent");
+     $("#post-sale").hide();
+      $("#post-rent").show();
+    $("#post-pg").hide();
+});
+
+$("#PG").change(function(){
+     $("#Sale").prop("checked", false);
+    $("#Rent").prop("checked", false);
+    
+    $("#property-info-subtitle").text("PG");
+     $("#post-sale").hide();
+      $("#post-rent").hide();
+    $("#post-pg").show();
+});
+/*** Property Details Post***/
+
+
+/*** Property Details Req ***/
+$("#ReqBuy").change(function(){
+    $("#ReqRent").prop("checked", false);
+    $("#ReqPG").prop("checked", false);
+    
+    $("#property-info-subtitle").text("Buy");
+     $("#require-buy").show();
+      $("#require-rent").hide();
+    $("#require-pg").hide();
+});
+
+$("#ReqRent").change(function(){
+    $("#ReqBuy").prop("checked", false);
+    $("#ReqPG").prop("checked", false);
+    
+    $("#property-info-subtitle").text("Rent");
+     $("#require-buy").hide();
+      $("#require-rent").show();
+    $("#require-pg").hide();
+});
+
+$("#ReqPG").change(function(){
+     $("#ReqBuy").prop("checked", false);
+    $("#ReqRent").prop("checked", false);
+    
+      $("#property-info-subtitle").text("PG");
+     $("#require-buy").hide();
+      $("#require-rent").hide();
+    $("#require-pg").show();
+});
+/*** Property Details Post***/
 
 
 
@@ -139,22 +220,6 @@ $("#ReadyToMove").change(function(){
 });
 /*** Possession ***/
 
-/*** Property Details ***/
-$("#Sale").change(function(){
-    $("#Rent").prop("checked", false);
-    $("#PG").prop("checked", false);
-});
-
-$("#Rent").change(function(){
-    $("#Sale").prop("checked", false);
-    $("#PG").prop("checked", false);
-});
-
-$("#PG").change(function(){
-     $("#Sale").prop("checked", false);
-    $("#Rent").prop("checked", false);
-});
-/*** Property Details ***/
 
 
 
