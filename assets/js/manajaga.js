@@ -69,6 +69,7 @@ $("#form-requiredproperty").hide();
 
 $("#property-info-title").text("Post Property");
 $("#property-details-post").show();
+$("#gallery-section").show();
 $("#property-details-require").hide();
 
 $("#PostProperty").change(function(){
@@ -83,6 +84,7 @@ $("#PostProperty").change(function(){
     $("#post-section").show();
     $("#require-section").hide();
     $("#property-info-title").text("Post Property");
+    $("#gallery-section").show();
 });
 
 $("#RequiredProperty").change(function(){
@@ -97,6 +99,9 @@ $("#RequiredProperty").change(function(){
     $("#post-section").hide();
     $("#require-section").show();
     $("#property-info-title").text("Require Property");
+    
+    $("#gallery-section").hide();
+   
 });
 /*** Post / Required Property options ***/
 
