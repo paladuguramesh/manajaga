@@ -3067,7 +3067,8 @@ nav .brand {
 	display: block;
 	position: relative;
 	width:213px;
-	top:15px; //23px
+	top:15px; /* 23px */
+	color: #ffffff;
 }
 
 nav .brand img {
@@ -3097,7 +3098,7 @@ nav .menu li a:hover {
 }
 
 .header-light nav.headnavbar {
-	background:#ffffff;
+	background:#022140;
     box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
 	-webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
 }
@@ -3121,7 +3122,7 @@ nav .menu li a:hover {
 .header.header-fixed nav.headnavbar{
 	box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
 	-webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
-	background:#ffffff;
+	background:#022140;
 	position:fixed;
 	z-index:999;
 	width: 100%;
@@ -3768,7 +3769,7 @@ li.login-attri .account-drop a {
     z-index: 3;
 }
 .large-banner{
-    min-height: 100vh;
+    min-height: 85vh; /*100vh*/
     padding: 5em 0;
     display: flex;
     flex-wrap: wrap;
@@ -8447,7 +8448,16 @@ a.blue2-theme {
  
 .pull-right{padding-right:10px;padding-left:0;text-align:right;border-left:0}
 
+ 
+.pull-left{padding-right:10px}
+.pull-left{float:left!important}
+
 .modal-dialog-property {
 		max-width: 850px;
 		margin: 30px auto;
 	}
+
+.country-label {
+	color: #ffffff;
+}	
+	

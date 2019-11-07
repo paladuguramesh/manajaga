@@ -11,22 +11,22 @@ $( document ).ready(function() {
 			 
 			 
 			 
-			 $('.create-new-post').attr('style', 'background-color: #f1d600 !important');
+			 $('.create-new-post').attr('style', 'background-color: #f08804 !important');
 			 
-			 elem.classList.add("text-danger");
+			// elem.classList.add("text-danger");
 			 elem.style.fontWeight = "bolder";
 			 elem.style.fontSize = "20px";
-			 
+			 elem.style.color = "#ffffff";
 		} else {
 		 	
 			
 			
 			$('.create-new-post').attr('style', 'background-color: #ffffff !important');
 			
-			elem.classList.remove("text-danger");
+		//	elem.classList.remove("text-danger");
 		 	elem.style.fontWeight = "normal";
 		 	elem.style.fontSize = "16px";
-			
+			elem.style.color = "#000000";
 		}
   		elem.innerHTML = txt;
   		counter++;
@@ -72,6 +72,20 @@ $("#property-details-post").show();
 $("#gallery-section").show();
 $("#property-details-require").hide();
 
+ $("#post-section").hide();
+ $("#require-section").hide();
+ 
+ $("#post-sale").show();
+ $("#post-rent").hide();
+ $("#post-pg").hide();
+ 
+ $("#require-buy").hide();
+ $("#require-rent").hide();
+ $("#require-pg").show();
+ 
+ $("#property-details-subtitile").text("For");
+ 
+
 $("#PostProperty").change(function(){
     $("#RequiredProperty").prop("checked", false);
     
@@ -81,10 +95,13 @@ $("#PostProperty").change(function(){
     ///
     $("#property-details-post").show();
 	$("#property-details-require").hide();
+	
     $("#post-section").show();
     $("#require-section").hide();
+    
     $("#property-info-title").text("Post Property");
     $("#gallery-section").show();
+     $("#property-details-subtitile").text("For");
 });
 
 $("#RequiredProperty").change(function(){
@@ -96,11 +113,14 @@ $("#RequiredProperty").change(function(){
      ///
      $("#property-details-post").hide();
 	$("#property-details-require").show();
+	
     $("#post-section").hide();
     $("#require-section").show();
+    
     $("#property-info-title").text("Require Property");
     
     $("#gallery-section").hide();
+     $("#property-details-subtitile").text("To");
    
 });
 /*** Post / Required Property options ***/
@@ -111,8 +131,12 @@ $("#Sale").change(function(){
     $("#PG").prop("checked", false);
     
     $("#property-info-subtitle").text("Sale");
-     $("#post-sale").show();
-      $("#post-rent").hide();
+    
+    $("#post-section").show();
+    $("#require-section").hide();
+    
+    $("#post-sale").show();
+    $("#post-rent").hide();
     $("#post-pg").hide();
 });
 
@@ -121,16 +145,24 @@ $("#Rent").change(function(){
     $("#PG").prop("checked", false);
     
      $("#property-info-subtitle").text("Rent");
+     
+    $("#post-section").show();
+    $("#require-section").hide();
+    
      $("#post-sale").hide();
-      $("#post-rent").show();
-    $("#post-pg").hide();
+     $("#post-rent").show();
+     $("#post-pg").hide();
 });
 
 $("#PG").change(function(){
      $("#Sale").prop("checked", false);
     $("#Rent").prop("checked", false);
     
-    $("#property-info-subtitle").text("PG");
+    $("#property-info-subtitle").text("Paying Guest");
+    
+     $("#post-section").show();
+    $("#require-section").hide();
+    
      $("#post-sale").hide();
       $("#post-rent").hide();
     $("#post-pg").show();
@@ -144,6 +176,10 @@ $("#ReqBuy").change(function(){
     $("#ReqPG").prop("checked", false);
     
     $("#property-info-subtitle").text("Buy");
+    
+     $("#post-section").hide();
+    $("#require-section").show();
+    
      $("#require-buy").show();
       $("#require-rent").hide();
     $("#require-pg").hide();
@@ -154,6 +190,10 @@ $("#ReqRent").change(function(){
     $("#ReqPG").prop("checked", false);
     
     $("#property-info-subtitle").text("Rent");
+    
+     $("#post-section").hide();
+    $("#require-section").show();
+    
      $("#require-buy").hide();
       $("#require-rent").show();
     $("#require-pg").hide();
@@ -163,7 +203,11 @@ $("#ReqPG").change(function(){
      $("#ReqBuy").prop("checked", false);
     $("#ReqRent").prop("checked", false);
     
-      $("#property-info-subtitle").text("PG");
+      $("#property-info-subtitle").text("Paying Guest");
+      
+       $("#post-section").hide();
+    $("#require-section").show();
+    
      $("#require-buy").hide();
       $("#require-rent").hide();
     $("#require-pg").show();
