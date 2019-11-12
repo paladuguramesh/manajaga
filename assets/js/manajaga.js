@@ -54,14 +54,18 @@ $("#builder").change(function () {
 
 
 /*** Post/Required Property options ***/
-$("#form-postproperty").show();
 $("#PostProperty").prop("checked", true);
+
+$("#property-details-post").show();
+$("#property-details-require").hide();
+
+$("#form-postproperty").show();
 $("#form-requiredproperty").hide();
 
 $("#property-info-title").text("Post Property");
-$("#property-details-post").show();
+
 $("#gallery-section").show();
-$("#property-details-require").hide();
+
 
 $("#post-section").hide();
 $("#require-section").hide();
@@ -70,12 +74,10 @@ $("#post-sale").show();
 $("#post-rent").hide();
 $("#post-pg").hide();
 
-$("#require-buy").hide();
-$("#require-rent").hide();
-$("#require-pg").show();
+$("#require-buy-rent").hide();
+$("#require-pg").hide();
 
 $("#property-details-subtitile").text("For");
-
 
 $("#PostProperty").change(function () {
     $("#RequiredProperty").prop("checked", false);
@@ -171,8 +173,8 @@ $("#ReqBuy").change(function () {
     $("#post-section").hide();
     $("#require-section").show();
 
-    $("#require-buy").show();
-    $("#require-rent").hide();
+    InitializeRequireBuyRent();
+    $("#require-buy-rent").show();
     $("#require-pg").hide();
 });
 
@@ -185,8 +187,8 @@ $("#ReqRent").change(function () {
     $("#post-section").hide();
     $("#require-section").show();
 
-    $("#require-buy").hide();
-    $("#require-rent").show();
+    InitializeRequireBuyRent();
+    $("#require-buy-rent").show();
     $("#require-pg").hide();
 });
 
@@ -199,8 +201,7 @@ $("#ReqPG").change(function () {
     $("#post-section").hide();
     $("#require-section").show();
 
-    $("#require-buy").hide();
-    $("#require-rent").hide();
+    $("#require-buy-rent").hide();
     $("#require-pg").show();
 });
 /*** Property Details Post***/
@@ -259,9 +260,197 @@ $("#ReadyToMove").change(function () {
 /*** Parking Available ***/
 $("#ParkingYes").change(function () {
     $("#ParkingNo").prop("checked", false);
+    $("#req-available-parking").show();
 });
 
 $("#ParkingNo").change(function () {
     $("#ParkingYes").prop("checked", false);
+    $("#req-available-parking").hide();
 });
 /*** Parking Available ***/
+
+/*** OtherRoom ***/
+$("#OtherRoomYes").change(function () {
+    $("#OtherRoomNo").prop("checked", false);
+    $("#req-roomname").show();
+});
+
+$("#OtherRoomNo").change(function () {
+    $("#OtherRoomYes").prop("checked", false);
+    $("#req-roomname").hide();
+});
+/*** OtherRoom ***/
+
+/*** TimingRestrictions ***/
+$("#pg-timerest-val").hide();
+$("#TimingRestrictionsYes").change(function () {
+    $("#TimingRestrictionsNo").prop("checked", false);
+    $("#pg-timerest-val").show();
+});
+
+$("#TimingRestrictionsNo").change(function () {
+    $("#TimingRestrictionsYes").prop("checked", false);
+    $("#pg-timerest-val").hide();
+});
+/*** OtherRoom ***/
+
+
+
+function InitializeRequireBuyRent(){
+    $("#req-bedrooms").hide();
+    $("#req-bathrooms").hide();
+    $("#req-floorno").hide();
+    $("#req-area").hide();
+    $("#req-face").hide();
+    $("#req-furniture").hide();
+    $("#req-opensides").hide();
+    $("#req-tradetype").hide();
+    $("#req-permission").hide();
+    $("#req-rent-purpose").hide();
+    $("#req-cshop").hide();
+    $("#req-gcommunity").hide();
+    $("#req-parking").hide();
+    $("#req-poojaroom").hide();
+    $("#req-otherroom").hide();
+    $("#req-roomname").hide();
+    $("#req-possession").hide();
+    $("#req-expprice").hide();
+    $("#req-responsefrom").hide();
+    $("#req-available-parking").hide();
+    $("#req-plot-facing-mainroad").hide();
+    $("#req-lrs").hide();
+    $("#req-venture").hide();
+    $("#req-waterfacility").hide();
+    $("#req-BoundaryWith").hide();
+    $("#req-totalfloors").hide();
+    $("#req-warehousefacing").hide();
+
+
+}
+
+function requireBuyRentPropertTypeChange(sel){
+    var ptype = sel.value;
+
+    InitializeRequireBuyRent();
+
+    if(ptype == "Agriculture Land") {
+
+        $("#req-area").show();
+        $("#req-face").show();
+        $("#req-expprice").show();
+        $("#req-waterfacility").show();
+        $("#req-opensides").show();
+        $("#req-BoundaryWith").show();
+        $("#req-responsefrom").show();
+
+    } else if(ptype == "Apartment") {
+
+        $("#req-bedrooms").show();
+        $("#req-bathrooms").show();
+        $("#req-area").show();
+        $("#req-face").show();
+        $("#req-tradetype").show();
+        $("#req-permission").show();
+        $("#req-gcommunity").show();
+        $("#req-furniture").show();
+        $("#req-opensides").show();
+        $("#req-parking").show();
+        $("#req-poojaroom").show();
+        $("#req-otherroom").show();
+        $("#req-possession").show();
+        $("#req-expprice").show();
+        $("#req-responsefrom").show();
+
+    } else if(ptype == "Commercial Plot") {
+
+        $("#req-area").show();
+        $("#req-plot-facing-mainroad").show();
+        $("#req-expprice").show();
+        $("#req-lrs").show();
+        $("#req-permission").show();
+        $("#req-waterfacility").show();
+        $("#req-opensides").show();
+        $("#req-BoundaryWith").show();
+        $("#req-responsefrom").show();
+
+    } else if(ptype == "Commercial Shop") {
+
+        $("#req-area").show();
+        $("#req-face").show();
+        $("#req-expprice").show();
+        $("#req-permission").show();
+        $("#req-waterfacility").show();
+        $("#req-opensides").show();
+        $("#req-responsefrom").show();
+
+    } else if(ptype == "PentHouse") {
+
+        $("#req-bedrooms").show();
+        $("#req-bathrooms").show();
+        $("#req-area").show();
+        $("#req-face").show();
+        $("#req-tradetype").show();
+        $("#req-permission").show();
+        $("#req-rent-purpose").show();
+        $("#req-gcommunity").show();
+        $("#req-furniture").show();
+        $("#req-opensides").show();
+        $("#req-parking").show();
+        $("#req-poojaroom").show();
+        $("#req-otherroom").show();
+        $("#req-possession").show();
+        $("#req-expprice").show();
+        $("#req-responsefrom").show();
+
+
+    } else if(ptype == "Residential House") {
+
+        $("#req-bedrooms").show();
+        $("#req-bathrooms").show();
+        $("#req-floorno").show();
+        $("#req-area").show();
+        $("#req-face").show();
+        $("#req-tradetype").show();
+        $("#req-permission").show();
+        $("#req-rent-purpose").show();
+        $("#req-cshop").show();
+        $("#req-gcommunity").show();
+        $("#req-furniture").show();
+        $("#req-opensides").show();
+        $("#req-parking").show();
+        $("#req-poojaroom").show();
+        $("#req-otherroom").show();
+        $("#req-possession").show();
+        $("#req-expprice").show();
+        $("#req-responsefrom").show();
+
+    } else if(ptype == "Residential Plot") {
+
+        $("#req-area").show();
+        $("#req-plot-facing-mainroad").show();
+        $("#req-expprice").show();
+        $("#req-lrs").show();
+        $("#req-permission").show();
+        $("#req-venture").show();
+        $("#req-waterfacility").show();
+        $("#req-opensides").show();
+        $("#req-BoundaryWith").show();
+        $("#req-responsefrom").show();
+
+
+    } else if(ptype == "Warehouse") {
+
+        $("#req-area").show();
+        $("#req-totalfloors").show();
+        $("#req-warehousefacing").show();
+        $("#req-expprice").show();
+        $("#req-bathrooms").show();
+        $("#req-permission").show();
+        $("#req-parking").show();
+        $("#req-waterfacility").show();
+        $("#req-opensides").show();
+        $("#req-furniture").show();
+        $("#req-responsefrom").show();
+
+    } 
+}
