@@ -3079,14 +3079,30 @@ nav .menu li a {
 	display: block;
 	padding:28px 25px;
 	text-decoration: none;
+	color:#fff;
+	font-size:15px;
+}
+
+nav .menu li ul li a {
+	display: block;
+	padding:28px 25px;
+	text-decoration: none;
 	color:#606c8e;
 	font-size:15px;
 }
 
+
 nav .menu li a:hover {
-	color:#fd5234;
+	color:#fff !important; 
 }
 
+nav .menu li ul li a:hover {
+	color:#606c8e;
+}
+
+.log-icon a{
+    color: #fff !important;
+}
 .header-dark-transparent nav .menu li a{
 	color:#ffffff;
 }
@@ -8448,6 +8464,7 @@ a.blue2-theme {
  
 .pull-right{padding-right:10px;padding-left:0;text-align:right;border-left:0}
 
+.mov-right{padding-right:10px;padding-left:0;text-align:right;border-left:0; float: right;}
  
 .pull-left{padding-right:10px}
 .pull-left{float:left!important}
