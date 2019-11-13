@@ -70,7 +70,8 @@ $("#gallery-section").show();
 $("#post-section").hide();
 $("#require-section").hide();
 
-$("#post-sale-rent").show();
+$("#post-sale").show();
+$("#post-rent").hide();
 $("#post-pg").hide();
 
 $("#require-buy-rent").hide();
@@ -144,7 +145,8 @@ $("#Sale").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale-rent").show();
+    $("#post-sale").show();
+    $("#post-rent").hide();
     $("#post-pg").hide();
 
     InitializePostSaleRent();
@@ -159,7 +161,8 @@ $("#Rent").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale-rent").show();
+    $("#post-sale").hide();
+    $("#post-rent").show();
     $("#post-pg").hide();
 
     InitializePostSaleRent();
@@ -174,7 +177,8 @@ $("#PG").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale-rent").hide();
+    $("#post-sale").hide();
+    $("#post-rent").hide();
     $("#post-pg").show();
 });
 /*** Property Details Post***/
@@ -586,16 +590,52 @@ function InitializePostSaleRent(){
     $("#post-totalprice").hide();
     $("#post-balconies").hide();
     $("#post-buildingage").hide();
+
+    $("#post-leaseyears").hide();
+    $("#post-rent-details").hide();
     
+    $("#post-commonbathroom").hide();
+    $("#post-attachedbathroom").hide();
+    
+    
+    $("#post-balcony").hide();
+    $("#post-commonarea").hide();
+    $("#post-cc-cameras").hide();
+    $("#post-watchmen").hide();
+    $("#post-pets-allowed").hide();
+    $("#post-available-for").hide();
+    $("#post-available-status").hide();
+    $("#post-water").hide();
+   
+    $("#post-Bathroom").hide();
+    $("#post-Cafeteria").hide();
+    $("#post-lrs").hide();
+    $("#pos-BoundaryWith").hide();
+    $("#post-now-under-lease").hide();
+    $("#post-acres").hide();
+    $("#post-land-to-main-road-distance").hide();
+    $("#post-soiltype").hide();
 }
 
-  function postPropertyTypeChange(val){
+// Post - Sale
+  function postPropertyTypeChangeSale(val){
 
         var ptype = val.value;
 
         InitializePostSaleRent();
 
         if(ptype == "Agriculture Land") {
+
+            $("#post-face").show();
+            $("#post-now-under-lease").show();
+            $("#post-acres").show();
+            $("#post-otherroom").show();
+            $("#post-water").show();
+            $("#pos-BoundaryWith").show();
+            $("#post-land-to-main-road-distance").show();
+            $("#post-soiltype").show();
+            $("#post-responsefrom").show();
+           
 
         } else if(ptype == "Apartment") {
 
@@ -605,7 +645,6 @@ function InitializePostSaleRent(){
             $("#post-floorno").show();
             $("#post-area").show();
             $("#post-totalprice").show();
-            $("#post-responsefrom").show();
             $("#post-face").show();
             $("#post-opensides").show();
             $("#post-furniture").show();
@@ -618,27 +657,319 @@ function InitializePostSaleRent(){
             $("#post-otherroom").show();
             $("#post-possession").show();
             $("#post-venture").show();
+            $("#post-responsefrom").show();
 
         } else if(ptype == "Commercial Plot") {
 
+            $("#post-face").show();
+            $("#post-area").show();
+            $("#post-leaseyears").show();
+            $("#post-venture").show();
+            $("#post-opensides").show();
+            $("#pos-BoundaryWith").show();
+            $("#post-totalprice").show();
+            $("#post-responsefrom").show();
+
         } else if(ptype == "Commercial Shop") {
+
+            $("#post-totalfloors").show();
+            $("#post-floorno").show();
+            $("#post-area").show();
+            $("#post-totalprice").show();
+            $("#post-buildingage").show();
+            $("#post-otherroom").show();
+            $("#post-bathrooms").show();
+            $("#post-furniture").show();
+            $("#post-tradetype").show();
+            $("#post-possession").show();
+            $("#post-parking").show();
+            $("#post-face").show();
+            $("#post-responsefrom").show();
 
         } else if(ptype == "Farm House") {
 
         } else if(ptype == "Industrial Land") {
 
+            $("#post-face").show();
+            $("#post-leaseyears").show();
+            $("#post-venture").show();
+            $("#post-permission").show();
+            $("#post-opensides").show();
+            $("#post-totalprice").show();
+            $("#post-responsefrom").show();
+
+
         } else if(ptype == "Individual House") {
 
         } else if(ptype == "Office Space") {
 
+            $("#post-totalfloors").show();
+            $("#post-floorno").show();
+            $("#post-area").show();
+            $("#post-buildingage").show();
+            $("#post-bathrooms").show();
+            $("#post-furniture").show();
+            $("#post-tradetype").show();
+            $("#post-parking").show();
+            $("#post-face").show();
+            $("#post-leaseyears").show();
+            $("#post-Cafeteria").show();
+            $("#post-opensides").show();
+            $("#post-possession").show();
+            $("#post-totalprice").show();
+            $("#post-responsefrom").show();
+    
+
         } else if(ptype == "Pent House") {
+
+            $("#post-bedrooms").show();
+            $("#post-bathrooms").show();
+            $("#post-area").show();
+            $("#post-totalprice").show();
+            $("#post-poojaroom").show();
+            $("#post-otherroom").show();
+            $("#post-buildingage").show();
+            $("#post-furniture").show();
+            $("#post-balconies").show();
+            $("#post-opensides").show();
+            $("#post-tradetype").show();
+            $("#post-possession").show();
+            $("#post-permission").show();
+            $("#post-parking").show();
+            $("#post-face").show();
+            $("#post-gcommunity").show();
+            $("#post-responsefrom").show();
 
         } else if(ptype == "Residential House") {
 
+            $("#post-bedrooms").show();
+            $("#post-bathrooms").show();
+            $("#post-totalfloors").show();
+            $("#post-area").show();
+            $("#post-totalprice").show();
+            $("#post-poojaroom").show();
+            $("#post-otherroom").show();
+            $("#post-furniture").show();
+            $("#post-face").show();
+            $("#post-opensides").show();
+            $("#post-balcony").show();
+            $("#post-tradetype").show();
+            $("#post-permission").show();
+            $("#post-possession").show();
+            $("#post-parking").show();
+            $("#post-buildingage").show();
+            $("#post-gcommunity").show();
+            $("#post-responsefrom").show();
+           
+
         } else if(ptype == "Residential Plot") {
 
+            $("#post-face").show();
+            $("#post-area").show();
+            $("#post-venture").show();
+            $("#post-opensides").show();
+            $("#post-responsefrom").show();
+            $("#post-lrs").show();
+            $("#pos-BoundaryWith").show();
+            $("#post-totalprice").show();
+
         } else if(ptype == "Ware House") {
+
+            $("#post-Bathroom").show();
+            $("#post-totalprice").show();
+            $("#post-totalfloors").show();
+            $("#post-floorno").show();
+            $("#post-area").show();
+            $("#post-buildingage").show();
+            $("#post-furniture").show();
+            $("#post-tradetype").show();
+            $("#post-permission").show();
+            $("#post-parking").show();
+            $("#post-face").show();
+            $("#post-opensides").show();
+            $("#post-responsefrom").show();
 
         } 
 
   }
+
+// Post - Rent
+  function postPropertyTypeChangeRent(val){
+
+    var ptype = val.value;
+
+    InitializePostSaleRent();
+
+    if(ptype == "Agriculture Land") {
+
+    } else if(ptype == "Apartment") {
+
+        $("#post-bedrooms").show();
+        $("#post-bathrooms").show();
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-commonbathroom").show();
+        $("#post-attachedbathroom").show();
+        $("#post-area").show();
+        $("#post-poojaroom").show();
+        $("#post-otherroom").show();
+        $("#post-opensides").show();
+        $("#post-available-for").show();
+        $("#post-buildingage").show();
+        $("#post-available-status").show();
+        $("#post-face").show();
+        $("#post-totalprice").show();
+        $("#post-responsefrom").show();
+        $("#post-furniture").show();
+        $("#post-leaseyears").show();
+        $("#post-rent-details").show();
+
+        $("#post-balcony").show();
+        $("#post-commonarea").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-pets-allowed").show();
+        $("#post-water").show();
+       
+       
+    } else if(ptype == "Commercial Plot") {
+
+        $("#post-face").show();
+        $("#post-area").show();
+        $("#post-available-status").show();
+        $("#post-opensides").show();
+        $("#post-commonarea").show();
+        $("#post-Bathroom").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-water").show();
+        $("#post-rent-details").show();
+        $("#post-responsefrom").show();
+
+    } else if(ptype == "Commercial Shop") {
+
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-area").show();
+        $("#post-available-status").show();
+        $("#post-face").show();
+        $("#post-water").show();
+        $("#post-Bathroom").show();
+        $("#post-permission").show();
+        $("#post-opensides").show();
+        $("#post-furniture").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-leaseyears").show();
+        $("#post-rent-details").show();
+        $("#post-responsefrom").show();
+
+
+    } else if(ptype == "Farm House") {
+
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-bedrooms").show();
+        $("#post-bathrooms").show();
+        $("#post-commonbathroom").show();
+        $("#post-attachedbathroom").show();
+        $("#post-area").show();
+        $("#post-poojaroom").show();
+        $("#post-otherroom").show();
+        $("#post-available-for").show();
+        $("#post-buildingage").show();
+        $("#post-available-status").show();
+        $("#post-face").show();
+        $("#post-opensides").show();
+        $("#post-commonarea").show();
+        $("#post-water").show();
+        $("#post-pets-allowed").show();
+        $("#post-furniture").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-rent-details").show();
+        $("#post-responsefrom").show();
+
+
+    } else if(ptype == "Industrial Land") {
+
+    } else if(ptype == "Individual House") {
+
+        $("#post-bedrooms").show();
+        $("#post-bathrooms").show();
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-commonbathroom").show();
+        $("#post-attachedbathroom").show();
+        $("#post-area").show();
+        $("#post-poojaroom").show();
+        $("#post-otherroom").show();
+        $("#post-opensides").show();
+        $("#post-available-for").show();
+        $("#post-buildingage").show();
+        $("#post-available-status").show();
+        $("#post-face").show();
+        $("#post-totalprice").show();
+        $("#post-responsefrom").show();
+        $("#post-furniture").show();
+        $("#post-leaseyears").show();
+        $("#post-rent-details").show();
+
+        $("#post-balcony").show();
+        $("#post-commonarea").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-pets-allowed").show();
+        $("#post-water").show();
+
+    } else if(ptype == "Office Space") {
+
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-area").show();
+        $("#post-available-status").show();
+        $("#post-face").show();
+        $("#post-water").show();
+        $("#post-Bathroom").show();
+        $("#post-Cafeteria").show();
+        $("#post-opensides").show();
+        $("#post-furniture").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-rent-details").show();
+        $("#post-responsefrom").show();
+
+    } else if(ptype == "Pent House") {
+
+    } else if(ptype == "Residential House") {
+
+    } else if(ptype == "Residential Plot") {
+
+        $("#post-face").show();
+        $("#post-area").show();
+        $("#post-water").show();
+        $("#post-venture").show();
+        $("#post-opensides").show();
+        $("#post-totalprice").show();
+        $("#post-responsefrom").show();
+
+    } else if(ptype == "Ware House") {
+
+        $("#post-totalfloors").show();
+        $("#post-floorno").show();
+        $("#post-face").show();
+        $("#post-area").show();
+        $("#post-available-status").show();
+        $("#post-opensides").show();
+        $("#post-commonarea").show();
+        $("#post-Bathroom").show();
+        $("#post-water").show();
+        $("#post-permission").show();
+        $("#post-cc-cameras").show();
+        $("#post-watchmen").show();
+        $("#post-rent-details").show();
+        $("#post-responsefrom").show();
+
+    } 
+
+}
