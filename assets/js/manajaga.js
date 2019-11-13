@@ -1,13 +1,13 @@
 /*** Change Blink Text ***/
 $(document).ready(function () {
-    var text = ["Post / Require Property", "Free"];
+    var text = ["Sell / Require Property", "Post Free"];
     var counter = 0;
     var elem = document.getElementById("blink_me");
     var inst = setInterval(change, 1000);
 
     function change() {
         var txt = text[counter];
-        if (txt == "Free") {
+        if (txt == "Post Free") {
 
             $('.create-new-post').attr('style', 'background-color: #f08804 !important');
 
@@ -70,14 +70,18 @@ $("#gallery-section").show();
 $("#post-section").hide();
 $("#require-section").hide();
 
-$("#post-sale").show();
-$("#post-rent").hide();
+$("#post-sale-rent").show();
 $("#post-pg").hide();
 
 $("#require-buy-rent").hide();
 $("#require-pg").hide();
 
 $("#property-details-subtitile").text("For");
+
+$("#post-require-property-title").text("Post Property");
+
+$("#gallery-step").show();
+$("#step-4").show();
 
 $("#PostProperty").change(function () {
     $("#RequiredProperty").prop("checked", false);
@@ -95,6 +99,12 @@ $("#PostProperty").change(function () {
     $("#property-info-title").text("Post Property");
     $("#gallery-section").show();
     $("#property-details-subtitile").text("For");
+
+    $("#post-require-property-title").text("Post Property");
+
+    $("#gallery-step").show();
+    $("#step-4").show();
+    $('#step-4').css('display', 'none');
 });
 
 $("#RequiredProperty").change(function () {
@@ -115,6 +125,12 @@ $("#RequiredProperty").change(function () {
     $("#gallery-section").hide();
     $("#property-details-subtitile").text("To");
 
+    $("#post-require-property-title").text("Require Property");
+
+    $("#gallery-step").hide();
+    $("#step-4").hide();
+    $('#step-4').css('display', 'none');
+
 });
 /*** Post / Required Property options ***/
 
@@ -128,9 +144,10 @@ $("#Sale").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale").show();
-    $("#post-rent").hide();
+    $("#post-sale-rent").show();
     $("#post-pg").hide();
+
+    InitializePostSaleRent();
 });
 
 $("#Rent").change(function () {
@@ -142,9 +159,10 @@ $("#Rent").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale").hide();
-    $("#post-rent").show();
+    $("#post-sale-rent").show();
     $("#post-pg").hide();
+
+    InitializePostSaleRent();
 });
 
 $("#PG").change(function () {
@@ -156,8 +174,7 @@ $("#PG").change(function () {
     $("#post-section").show();
     $("#require-section").hide();
 
-    $("#post-sale").hide();
-    $("#post-rent").hide();
+    $("#post-sale-rent").hide();
     $("#post-pg").show();
 });
 /*** Property Details Post***/
@@ -269,6 +286,18 @@ $("#ParkingNo").change(function () {
 });
 /*** Parking Available ***/
 
+/*** Post Parking Available ***/
+$("#PostParkingYes").change(function () {
+    $("#PostParkingNo").prop("checked", false);
+    $("#post-available-parking").show();
+});
+
+$("#PostParkingNo").change(function () {
+    $("#PostParkingYes").prop("checked", false);
+    $("#post-available-parking").hide();
+});
+/*** Post Parking Available ***/
+
 /*** OtherRoom ***/
 $("#OtherRoomYes").change(function () {
     $("#OtherRoomNo").prop("checked", false);
@@ -294,9 +323,46 @@ $("#TimingRestrictionsNo").change(function () {
 });
 /*** OtherRoom ***/
 
+$("#pg-date-val").hide();
+function pgAvailableStatusChange(val){
+    var availableStatus = val.value;
 
+    if(availableStatus == "Date") {
+        $("#pg-date-val").show();
+    } else {
+        $("#pg-date-val").hide();
+    }
+}
+
+
+$("#pg-furniture-desc").hide();
+function pgFurnitureChange(val){
+    var furnitureDesc = val.value;
+
+    if(furnitureDesc == "Furnished") {
+        $("#pg-furniture-desc").show();
+    } else if(furnitureDesc == "SemiFurnished") {
+        $("#pg-furniture-desc").show();
+    } else {
+        $("#pg-furniture-desc").hide();
+    }
+}
+
+$("#post-furniture-desc").hide();
+function postFurnitureChange(val){
+    var furnitureDesc = val.value;
+
+    if(furnitureDesc == "Furnished") {
+        $("#post-furniture-desc").show();
+    } else if(furnitureDesc == "SemiFurnished") {
+        $("#post-furniture-desc").show();
+    } else {
+        $("#post-furniture-desc").hide();
+    }
+}
 
 function InitializeRequireBuyRent(){
+
     $("#req-bedrooms").hide();
     $("#req-bathrooms").hide();
     $("#req-floorno").hide();
@@ -324,7 +390,6 @@ function InitializeRequireBuyRent(){
     $("#req-BoundaryWith").hide();
     $("#req-totalfloors").hide();
     $("#req-warehousefacing").hide();
-
 
 }
 
@@ -454,3 +519,126 @@ function requireBuyRentPropertTypeChange(sel){
 
     } 
 }
+
+function areaChangeEvent(areaVal){
+    var areaSelected = areaVal.value;
+    
+    $("#area-length").text(areaSelected);
+
+    if(areaSelected == "Sq-ft") {
+
+       
+
+        $("#area-length").attr("placeholder", "ft");
+        $("#area-bredth").attr("placeholder", "ft");
+
+    } else if(areaSelected == "Sq-yrd") {
+
+        $("#area-length").attr("placeholder", "yrd");
+        $("#area-bredth").attr("placeholder", "yrd");
+
+    } else if(areaSelected == "Sq-m") {
+
+        $("#area-length").attr("placeholder", "m");
+        $("#area-bredth").attr("placeholder", "m");
+
+    } else {
+
+        $("#area-length").attr("placeholder", "Length");
+        $("#area-bredth").attr("placeholder", "Breadth");
+
+
+    }
+
+}
+
+function InitializePostSaleRent(){
+
+    $("#post-bedrooms").hide();
+    $("#post-bathrooms").hide();
+    $("#post-floorno").hide();
+    $("#post-area").hide();
+    $("#post-face").hide();
+    $("#post-furniture").hide();
+    $("#post-opensides").hide();
+    $("#post-tradetype").hide();
+    $("#post-permission").hide();
+    $("#post-rent-purpose").hide();
+    $("#post-cshop").hide();
+    $("#post-gcommunity").hide();
+    $("#post-parking").hide();
+    $("#post-poojaroom").hide();
+    $("#post-otherroom").hide();
+    $("#post-roomname").hide();
+    $("#post-possession").hide();
+    $("#post-expprice").hide();
+    $("#post-responsefrom").hide();
+    $("#post-available-parking").hide();
+    $("#post-plot-facing-mainroad").hide();
+    $("#post-lrs").hide();
+    $("#post-venture").hide();
+    $("#post-waterfacility").hide();
+    $("#post-BoundaryWith").hide();
+    $("#post-totalfloors").hide();
+    $("#post-warehousefacing").hide();
+    
+    $("#post-responsefrom").hide();
+    $("#post-totalprice").hide();
+    $("#post-balconies").hide();
+    $("#post-buildingage").hide();
+    
+}
+
+  function postPropertyTypeChange(val){
+
+        var ptype = val.value;
+
+        InitializePostSaleRent();
+
+        if(ptype == "Agriculture Land") {
+
+        } else if(ptype == "Apartment") {
+
+            $("#post-bedrooms").show();
+            $("#post-bathrooms").show();
+            $("#post-totalfloors").show();
+            $("#post-floorno").show();
+            $("#post-area").show();
+            $("#post-totalprice").show();
+            $("#post-responsefrom").show();
+            $("#post-face").show();
+            $("#post-opensides").show();
+            $("#post-furniture").show();
+            $("#post-buildingage").show();
+            $("#post-gcommunity").show();
+            $("#post-tradetype").show();
+            $("#post-permission").show();
+            $("#post-parking").show();
+            $("#post-poojaroom").show();
+            $("#post-otherroom").show();
+            $("#post-possession").show();
+            $("#post-venture").show();
+
+        } else if(ptype == "Commercial Plot") {
+
+        } else if(ptype == "Commercial Shop") {
+
+        } else if(ptype == "Farm House") {
+
+        } else if(ptype == "Industrial Land") {
+
+        } else if(ptype == "Individual House") {
+
+        } else if(ptype == "Office Space") {
+
+        } else if(ptype == "Pent House") {
+
+        } else if(ptype == "Residential House") {
+
+        } else if(ptype == "Residential Plot") {
+
+        } else if(ptype == "Ware House") {
+
+        } 
+
+  }

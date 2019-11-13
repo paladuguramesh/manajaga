@@ -1291,6 +1291,14 @@
 									<div class="input-with-icon">
 										<input type="password" class="form-control" placeholder="Password">
 										<i class="ti-unlock"></i>
+										<!-- <i id="pass-status" class="fa fa-eye moc-right" aria-hidden="true" onClick="viewPassword()"></i> -->
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="input-with-icon">
+										<input type="password" class="form-control" placeholder="Confirm Password">
+										<i class="ti-unlock"></i>
 									</div>
 								</div>
 
@@ -1421,34 +1429,34 @@
 
 					<div class="modal-body">
 
-						<h4 class="modal-header-title">Post / Require Property</h4>
+						<h4 class="modal-header-title" id="post-require-property-title">Post / Require Property</h4>
 
 						<div class="stepwizard col-lg-offset-3">
 							<div class="stepwizard-row setup-panel">
 
 								<div class="stepwizard-step">
-									<a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+									<a href="#step-1" type="button" class="btn btn-primary btn-circle"></a>
 									<p>Choose Option</p>
 								</div>
 
 								<div class="stepwizard-step">
 									<a href="#step-2" type="button" class="btn btn-default btn-circle"
-										disabled="disabled">2</a>
+										disabled="disabled"></a>
 									<p>User Info</p>
 								</div>
 								<div class="stepwizard-step">
 									<a href="#step-3" type="button" class="btn btn-default btn-circle"
-										disabled="disabled">3</a>
+										disabled="disabled"></a>
 									<p>Property Info</p>
 								</div>
-								<div class="stepwizard-step">
+								<div class="stepwizard-step" id="gallery-step">
 									<a href="#step-4" type="button" class="btn btn-default btn-circle"
-										disabled="disabled">4</a>
+										disabled="disabled"></a>
 									<p>Gallery</p>
 								</div>
 								<div class="stepwizard-step">
 									<a href="#step-5" type="button" class="btn btn-default btn-circle"
-										disabled="disabled">5</a>
+										disabled="disabled"></a>
 									<p>Location</p>
 								</div>
 
@@ -1643,46 +1651,37 @@
 												<!-- Post -->
 												<div id="post-section">
 
-													<div class="submit-section" id="post-sale">
+													<div class="submit-section" id="post-sale-rent">
 														<div class="form-row">
+
+															<div class="form-group col-md-6">
+																<label>Property Type</label>
+																<select class="form-control" onchange="postPropertyTypeChange(this)">
+																	<option value=""> -- Select -- </option>
+																	<option value="Agriculture Land">Agriculture Land</option>
+																	<option value="Apartment">Apartment</option>
+																	<option value="Commercial Plot">Commercial Plot</option>
+																	<option value="Commercial Shop">Commercial Shop</option>
+																	<option value="Farm House">Farm House</option>
+																	<option value="Industrial Land">Industrial Land</option>
+																	<option value="Individual House">Individual House</option>
+																	<option value="Office Space">Office Space</option>
+																	<option value="Pent House">Pent House</option>
+																	<option value="Residential House">Residential House</option>
+																	<option value="Residential Plot">Residential Plot</option>
+																	<option value="Ware House">Ware House</option>
+																</select>
+															</div>
 
 															<div class="form-group col-md-6">
 																<label>Property Title</label>
 																<input type="text" class="form-control">
 															</div>
 
-															<div class="form-group col-md-6">
-																<label>Property Type</label>
-																<select id="ptypes" class="form-control">
-																	<option value="">&nbsp;</option>
-																	<option value="Villa">Villa</option>
-																	<option value="Apartment">Apartment</option>
-																	<option value="Commercial Shop">Commercial Shop
-																	</option>
-																	<option value="Commercial Land">Commercial Land
-																	</option>
-																	<option value="Commercial Office Space">Commercial
-																		Office Space</option>
-																	<option value="Residential House">Residential House
-																	</option>
-																	<option value="Residential Plot">Residential Plot
-																	</option>
-																	<option value="PentHouse">PentHouse</option>
-																	<option value="Warehouse">Warehouse</option>
-																	<option value="Industrial Land">Industrial Land
-																	</option>
-																	<option value="Industrial Building">Industrial
-																		Building</option>
-																	<option value="Agriculture Land">Agriculture Land
-																	</option>
-																	<option value="Farm House">Farm House</option>
-																</select>
-															</div>
-
-															<div class="form-group col-md-6">
+															<div class="form-group col-md-6" id="post-bedrooms">
 																<label>Bedrooms</label>
-																<select id="bedrooms" class="form-control">
-																	<option value="">&nbsp;</option>
+																<select class="form-control">
+																	<option value=""> -- Select -- </option>
 																	<option value="1">1</option>
 																	<option value="2">2</option>
 																	<option value="3">3</option>
@@ -1696,10 +1695,10 @@
 																</select>
 															</div>
 
-															<div class="form-group col-md-6">
+															<div class="form-group col-md-6" id="post-bathrooms">
 																<label>Bathrooms</label>
-																<select id="bathrooms" class="form-control">
-																	<option value="">&nbsp;</option>
+																<select class="form-control">
+																	<option value=""> -- Select -- </option>
 																	<option value="1">1</option>
 																	<option value="2">2</option>
 																	<option value="3">3</option>
@@ -1713,9 +1712,55 @@
 																</select>
 															</div>
 
-															<div class="form-group col-md-6">
+															<div class="form-group col-md-6" id="post-totalfloors">
+																	<label>Total Floors</label>
+																	<select class="form-control">
+																		<option value=""> -- Select -- </option>
+																		<option value="0">0</option>
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">3</option>
+																		<option value="4">4</option>
+																		<option value="5">5</option>
+																		<option value="6">6</option>
+																		<option value="7">7</option>
+																		<option value="8">8</option>
+																		<option value="9">9</option>
+																		<option value="10">10</option>
+																		<option value="10">11</option>
+																		<option value="10">12</option>
+																		<option value="10">13</option>
+																		<option value="10">14</option>
+																		<option value="10">15</option>
+																		<option value="10">16</option>
+																		<option value="10">17</option>
+																		<option value="10">18</option>
+																		<option value="10">19</option>
+																		<option value="10">20</option>
+																	</select>
+																</div>
+
+																<div class="form-group col-md-6" id="post-floorno">
+																	<label>Floor No</label>
+																	<select class="form-control">
+																		<option value=""> -- Select -- </option>
+																		<option value="0">0</option>
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">3</option>
+																		<option value="4">4</option>
+																		<option value="5">5</option>
+																		<option value="6">6</option>
+																		<option value="7">7</option>
+																		<option value="8">8</option>
+																		<option value="9">9</option>
+																		<option value="10">10</option>
+																	</select>
+																</div>
+
+															<div class="form-group col-md-6" id="post-balconies">
 																<label>Balconies</label>
-																<select id="balconies" class="form-control">
+																<select class="form-control">
 																	<option value="">&nbsp;</option>
 																	<option value="1">1</option>
 																	<option value="2">2</option>
@@ -1730,92 +1775,69 @@
 																</select>
 															</div>
 
-															<div class="form-group col-md-6">
-																<label>Total Price (INR)</label>
-																<input type="text" class="form-control">
-															</div>
-
-															<div class="form-group col-md-12">
-																<label>Other Rooms</label>
+															<div class="form-group col-md-12" id="post-area">
+																
+																<div class = "row">
+																	<div class="form-group col-md-3">
+																			<label>Area</label>
+																			<select class="form-control" onchange="areaChangeEvent(this)">
+																				<option value=""> -- Select -- </option>
+																				<option value="Sq-ft">Sq-ft</option>
+																				<option value="Sq-yrd">Sq-yrd</option>
+																				<option value="Sq-m">Sq-m</option>
+																				<option value="Acre">Acre</option>
+																				<option value="Bigha">Bigha</option>
+																				<option value="Hectare">Hectare</option>
+																				<option value="Marla">Marla</option>
+																				<option value="Kanal">Kanal</option>
+																				<option value="Biswa1">Biswa1</option>
+																				<option value="Biswa2">Biswa2</option>
+																				<option value="Aankadam">Aankadam</option>
+																				<option value="Rood">Rood</option>
+																				<option value="Chatak">Chatak</option>
+																				<option value="Kottah">Kottah</option>
+																				<option value="Perch">Perch</option>
+																				<option value="Guntha">Guntha</option>
+																				<option value="Are">Are</option>
+																			</select>
+																		</div>
+															
+															<div class="form-group col-md-3">
+																<label>Area Value</label>
+																<input type="text" class="form-control" placeholder="Area">
 															</div>
 
 															<div class="form-group col-md-3">
-																<input type="checkbox" class="" value="Pooja Room"
-																	id="PoojaRoom" name="PoojaRoom">
-																<label for="PoojaRoom"
-																	class="checkbox-custom-label">Pooja Room</label>
+																<label>Length</label>
+																<input type="text" class="form-control" placeholder="Length" id="area-length">
 															</div>
-
 															<div class="form-group col-md-3">
-																<input type="checkbox" class="" value="Study Room"
-																	id="StudyRoom" name="StudyRoom">
-																<label for="StudyRoom"
-																	class="checkbox-custom-label">Study Room</label>
+																	<label>Breadth</label>
+																<input type="text" class="form-control" placeholder="Breadth" id="area-bredth">
 															</div>
+														</div>
+														</div>
 
-															<div class="form-group col-md-3">
-																<input type="checkbox" class="" value="Others"
-																	id="Others" name="Others">
-																<label for="Others"
-																	class="checkbox-custom-label">Others</label>
-															</div>
-
-															<div class="form-group col-md-6">
-																<label>Total Floors</label>
-																<select id="floors" class="form-control">
-																	<option value="">&nbsp;</option>
-																	<option value="0">0</option>
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																	<option value="9">9</option>
-																	<option value="10">10</option>
-																</select>
-															</div>
-
-															<div class="form-group col-md-6">
+															<!-- Furniture -->
+															<div class="form-group col-md-6" id="post-furniture">
 																<label>Furniture</label>
-																<select id="furniture" class="form-control">
-																	<option value="">&nbsp;</option>
+																<select class="form-control" onchange="postFurnitureChange(this)">
+																	<option value=""> -- Select -- </option>
 																	<option value="Furnished">Furnished</option>
 																	<option value="UnFurnished">UnFurnished</option>
 																	<option value="SemiFurnished">SemiFurnished</option>
 																</select>
 															</div>
 
-															<div class="form-group col-md-6">
-																<label>Area</label>
-																<select id="area" class="form-control">
-																	<option value="">&nbsp;</option>
-																	<option value="Sq-ft">Sq-ft</option>
-																	<option value="Sq-yrd">Sq-yrd</option>
-																	<option value="Sq-m">Sq-m</option>
-																	<option value="Acre">Acre</option>
-																	<option value="Bigha">Bigha</option>
-																	<option value="Hectare">Hectare</option>
-																	<option value="Marla">Marla</option>
-																	<option value="Kanal">Kanal</option>
-																	<option value="Biswa1">Biswa1</option>
-																	<option value="Biswa2">Biswa2</option>
-																	<option value="Aankadam">Aankadam</option>
-																	<option value="Rood">Rood</option>
-																	<option value="Chatak">Chatak</option>
-																	<option value="Kottah">Kottah</option>
-																	<option value="Perch">Perch</option>
-																	<option value="Guntha">Guntha</option>
-																	<option value="Are">Are</option>
-																</select>
+															<div class="form-group col-md-6" id="post-furniture-desc">
+																<label>Furniture Details</label>
+																	<input type="text" class="form-control" placeholder="Enter Furniture Details">
 															</div>
 
-															<div class="form-group col-md-6">
+															<div class="form-group col-md-6" id="post-buildingage">
 																<label>Building Age</label>
-																<select id="bage" class="form-control">
-																	<option value="">&nbsp;</option>
+																<select class="form-control">
+																	<option value="">-- Select --</option>
 																	<option value="1">0 - 5 Years</option>
 																	<option value="2">5 - 10Years</option>
 																	<option value="3">10 - 15 Years</option>
@@ -1824,10 +1846,81 @@
 																</select>
 															</div>
 
-															<!-- Trade Type -->
-															<div class="form-group col-md-12">
-																<label>Trade Type</label>
+															<div class="form-group col-md-6" id="post-opensides">
+																<label>Open Sides</label>
+																<select class="form-control">
+																	<option value=""> -- Select -- </option>
+																	<option value="0">0</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																</select>
 															</div>
+	
+															<div class="form-group col-md-6" id="post-face">
+																<label>Facing</label>
+																<select class="form-control">
+																	<option value=""> -- Select -- </option>
+																	<option value="East">East</option>
+																	<option value="West">West</option>
+																	<option value="North">North</option>
+																	<option value="South">South</option>
+																</select>
+															</div>
+
+															
+
+															<!-- Pooja Room -->
+															<div class="form-group col-md-12" id="post-poojaroom">
+																<label>Pooja Room</label>
+																<div class="row">
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="Yes"
+																	id="PoojaRoomYes" name="PoojaRoomYes">
+																<label for="PoojaRoomYes"
+																	class="checkbox-custom-label">Yes</label>
+															</div>
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="PoojaRoomNo" name="PoojaRoomNo">
+																<label for="PoojaRoomNo"
+																	class="checkbox-custom-label">No</label>
+															</div>
+														</div>
+														</div>
+
+															<!-- Other Rooms -->
+															<div class="form-group col-md-12" id="post-otherroom">
+																<label>Other Rooms</label>
+																<div class="row">
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="Yes"
+																	id="OtherRoomYes" name="OtherRoomYes">
+																<label for="OtherRoomYes"
+																	class="checkbox-custom-label">Yes</label>
+															</div>
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="OtherRoomNo" name="OtherRoomNo">
+																<label for="OtherRoomNo"
+																	class="checkbox-custom-label">No</label>
+															</div>
+														</div>
+															</div>
+															<div class="form-group col-md-6" id="post-roomname">
+																<label>Room Name</label>
+																<input type="text" class="form-control">
+															</div>
+
+															<!-- Trade Type -->
+															<div class="form-group col-md-12" id="post-tradetype">
+																<label>Trade Type</label>
+																<div class="row">
 
 															<div class="form-group col-md-4">
 																<input type="radio" class="checkbox-custom"
@@ -1843,11 +1936,14 @@
 																<label for="Resale"
 																	class="checkbox-custom-label">Resale</label>
 															</div>
+														</div>
+														</div>
+
 
 															<!-- Possession -->
-															<div class="form-group col-md-12">
+															<div class="form-group col-md-12" id="post-possession">
 																<label>Possession</label>
-															</div>
+																<div class="row">
 
 															<div class="form-group col-md-4">
 																<input type="radio" class="checkbox-custom"
@@ -1865,31 +1961,135 @@
 																<label for="ReadyToMove"
 																	class="checkbox-custom-label">Ready to Move</label>
 															</div>
-
-															<!-- Parking  Available -->
-															<div class="form-group col-md-12">
-																<label>Parking Available</label>
+														</div>
 															</div>
+
+															<!-- Property Permission -->
+															<div class="form-group col-md-12" id="post-permission">
+																<label>Property Permission</label>
+																<div class="row">
 
 															<div class="form-group col-md-4">
 																<input type="radio" class="checkbox-custom" value="Yes"
-																	id="ParkingYes" name="ParkingYes">
-																<label for="ParkingYes"
+																	id="PermissionYes" name="PermissionYes">
+																<label for="PermissionYes"
 																	class="checkbox-custom-label">Yes</label>
 															</div>
 
 															<div class="form-group col-md-4">
 																<input type="radio" class="checkbox-custom" value="No"
-																	id="ParkingNo" name="ParkingNo">
-																<label for="ParkingNo"
+																	id="PermissionNo" name="PermissionNo">
+																<label for="PermissionNo"
 																	class="checkbox-custom-label">No</label>
 															</div>
+														</div>
+														</div>
 
-															<!-- Response From -->
-															<div class="form-group col-md-12">
-																<label>Response From</label>
+															<!-- Gated Community -->
+															<div class="form-group col-md-12" id="post-gcommunity">
+																<label>Gated Community</label>
+															
+																<div class="row">
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="Yes"
+																	id="GatedCommYes" name="GatedCommYes">
+																<label for="GatedCommYes"
+																	class="checkbox-custom-label">Yes</label>
 															</div>
 
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="GatedCommNo" name="GatedCommNo">
+																<label for="GatedCommNo"
+																	class="checkbox-custom-label">No</label>
+															</div>
+														</div>
+														</div>
+
+														<!-- Venture -->
+														<div class="form-group col-md-12" id="post-venture">
+															<label>Venture</label>
+														
+															<div class="row">
+														<div class="form-group col-md-4">
+															<input type="radio" class="checkbox-custom" value="Yes"
+																id="VentureYes" name="VentureYes">
+															<label for="VentureYes"
+																class="checkbox-custom-label">Yes</label>
+														</div>
+
+														<div class="form-group col-md-4">
+															<input type="radio" class="checkbox-custom" value="No"
+																id="VentureNo" name="VentureNo">
+															<label for="VentureNo"
+																class="checkbox-custom-label">No</label>
+														</div>
+													</div>
+													</div>
+
+
+															<!-- Parking  Available -->
+															<div class="form-group col-md-12" id="post-parking">
+																<label>Parking Available</label>
+																<div class="row">
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="Yes"
+																	id="PostParkingYes" name="PostParkingYes">
+																<label for="PostParkingYes"
+																	class="checkbox-custom-label">Yes</label>
+															</div>
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="PostParkingNo" name="PostParkingNo">
+																<label for="PostParkingNo"
+																	class="checkbox-custom-label">No</label>
+															</div>
+														</div>
+														</div>
+
+														<div class="form-group col-md-12" id="post-available-parking">
+																<label>Parking For</label>
+																<div class="row">
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="Yes"
+																	id="CarYes" name="CarYes">
+																<label for="CarYes"
+																	class="checkbox-custom-label">Car</label>
+															</div>
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="BikeYes" name="BikeYes">
+																<label for="BikeYes"
+																	class="checkbox-custom-label">Bike</label>
+															</div>
+
+															<div class="form-group col-md-4">
+																<input type="radio" class="checkbox-custom" value="No"
+																	id="BikeYes" name="BikeYes">
+																<label for="BikeYes"
+																	class="checkbox-custom-label">Both</label>
+															</div>
+														</div>
+														</div>
+
+														
+
+														
+
+														<div class="form-group col-md-6" id="post-totalprice">
+															<label>Total Price (INR)</label>
+															<input type="text" class="form-control">
+														</div>
+
+															<!-- Response From -->
+															<div class="form-group col-md-12" id="post-responsefrom">
+																<label>Response From</label>
+															
+														<div class="row">
 															<div class="form-group col-md-3">
 																<input type="checkbox" class="" value="Only Owners"
 																	id="OnlyOwners" name="OnlyOwners">
@@ -1917,13 +2117,587 @@
 																<label for="all"
 																	class="checkbox-custom-label">All</label>
 															</div>
-
+														</div>
 														</div>
 													</div>
 
-													<div id="post-rent"></div>
+												
 
-													<div id="post-pg"></div>
+													<div id="post-pg">
+														
+														<div class="form-row">
+
+															<div class="form-group col-md-6">
+																<label>Property Type</label>
+																<select class="form-control">
+																	<option value=""> -- Select -- </option>
+																	<option value="Apartment">Apartment</option>
+																	<option value="Individual House">Individual House</option>
+																</select>
+															</div>
+
+																<div class="form-group col-md-6">
+																		<label>Total Floors</label>
+																		<select class="form-control">
+																			<option value=""> -- Select -- </option>
+																			<option value="0">0</option>
+																			<option value="1">1</option>
+																			<option value="2">2</option>
+																			<option value="3">3</option>
+																			<option value="4">4</option>
+																			<option value="5">5</option>
+																			<option value="6">6</option>
+																			<option value="7">7</option>
+																			<option value="8">8</option>
+																			<option value="9">9</option>
+																			<option value="10">10</option>
+																			<option value="11">11</option>
+																			<option value="12">12</option>
+																			<option value="13">13</option>
+																			<option value="14">14</option>
+																			<option value="15">15</option>
+																			<option value="16">16</option>
+																			<option value="17">17</option>
+																			<option value="18">18</option>
+																			<option value="18">19</option>
+																			<option value="20">20</option>
+																		</select>
+																	</div>
+
+																	<div class="form-group col-md-6">
+																			<label>Floor No </label>
+																			<select class="form-control">
+																				<option value=""> -- Select -- </option>
+																				<option value="0">0</option>
+																				<option value="1">1</option>
+																				<option value="2">2</option>
+																				<option value="3">3</option>
+																				<option value="4">4</option>
+																				<option value="5">5</option>
+																				<option value="6">6</option>
+																				<option value="7">7</option>
+																				<option value="8">8</option>
+																				<option value="9">9</option>
+																				<option value="10">10</option>
+																				<option value="11">11</option>
+																				<option value="12">12</option>
+																				<option value="13">13</option>
+																				<option value="14">14</option>
+																				<option value="15">15</option>
+																				<option value="16">16</option>
+																				<option value="17">17</option>
+																				<option value="18">18</option>
+																				<option value="18">19</option>
+																				<option value="20">20</option>
+																			</select>
+																		</div>
+
+																		<div class="form-group col-md-6">
+																				<label>Available For</label>
+																				<select class="form-control">
+																					<option value=""> -- Select -- </option>
+																					<option value="Male">Male</option>
+																					<option value="Female">Female</option>
+																					<option value="Both">Both</option>
+																				</select>
+																			</div>
+
+																			<div class="form-group col-md-6">
+																					<label>Occupancy</label>
+																					<select class="form-control">
+																						<option value=""> -- Select -- </option>
+																						<option value="Single">Single</option>
+																						<option value="Sharing">Sharing</option>
+																						<option value="Both">Both</option>
+																					</select>
+																				</div>
+
+																				<div class="form-group col-md-6">
+																						<label>How Old is the PG ?</label>
+																						<select class="form-control">
+																							<option value=""> -- Select -- </option>
+																							<option value="1 Year">1 Year</option>
+																							<option value="2 Year">2 Year</option>
+																							<option value="3 Year">3 Year</option>
+																							<option value="4 Year">4 Year</option>
+																							<option value="5 Year">5 Year</option>
+																							<option value="6 Year">6 Year</option>
+																							<option value="7 Year">7 Year</option>
+																							<option value="8 Year">8 Year</option>
+																							<option value="9 Year">9 Year</option>
+																							<option value="10 Year">10 Year</option>
+																						</select>
+																					</div>
+																					<div class="form-group col-md-6">
+																							<label>Available Status</label>
+																							<select class="form-control" onchange="pgAvailableStatusChange(this)">
+																								<option value=""> -- Select -- </option>
+																								<option value="Immediately">Immediately</option>
+																								<option value="Date">Date</option>
+																							</select>
+																						</div>
+
+																						<div class="form-group col-md-6" id="pg-date-val">
+																							<label>Select Date</label>
+																								<input id="datepicker1" type="text" placeholder="Select Date" class="form-control">
+																						</div>
+																						
+																						<div class="form-group col-md-6">
+																								<label>Tenants Prefer</label>
+																								<select class="form-control">
+																									<option value=""> -- Select -- </option>
+																									<option value="Professional">Professional</option>
+																									<option value="Student">Student</option>
+																									<option value="Both">Both</option>
+																								</select>
+																							</div>
+
+																							<div class="form-group col-md-6">
+																									<label>No.Of Rooms in PG</label>
+																									<select class="form-control">
+																										<option value=""> -- Select -- </option>
+																										<option value="1">1</option>
+																										<option value="2">2</option>
+																										<option value="3">3</option>
+																										<option value="4">4</option>
+																										<option value="5">5</option>
+																										<option value="6">6</option>
+																										<option value="7">7</option>
+																										<option value="8">8</option>
+																										<option value="9">9</option>
+																										<option value="10">10</option>
+																									</select>
+																								</div>
+																								<div class="form-group col-md-6">
+																										<label>No.Of Beds in Room</label>
+																										<select class="form-control">
+																											<option value=""> -- Select -- </option>
+																											<option value="1">1</option>
+																											<option value="2">2</option>
+																											<option value="3">3</option>
+																											<option value="4">4</option>
+																											<option value="5">5</option>
+																											<option value="6">6</option>
+																											<option value="7">7</option>
+																											<option value="8">8</option>
+																											<option value="9">9</option>
+																											<option value="10">10</option>
+																										</select>
+																									</div>
+
+																										<!-- Attached BathRoom -->
+																										<div class="form-group col-md-12">
+																												<label>Attached BathRoom</label>
+																												<div class="row">
+												
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="Yes"
+																													id="AttachedBathRoomYes" name="AttachedBathRoomYes">
+																												<label for="AttachedBathRoomYes"
+																													class="checkbox-custom-label">Yes</label>
+																											</div>
+												
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="No"
+																													id="AttachedBathRoomNo" name="AttachedBathRoomNo">
+																												<label for="AttachedBathRoomNo"
+																													class="checkbox-custom-label">No</label>
+																											</div>
+																										</div>
+																										</div>
+
+																											<!-- Sharing BathRoom Required -->
+																											<div class="form-group col-md-12">
+																													<label>Sharing BathRoom</label>
+																													<div class="row">
+													
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="Yes"
+																														id="SharingBathRoomYes" name="SharingBathRoomYes">
+																													<label for="SharingBathRoomYes"
+																														class="checkbox-custom-label">Yes</label>
+																												</div>
+													
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="No"
+																														id="SharingBathRoomNo" name="SharingBathRoomNo">
+																													<label for="SharingBathRoomNo"
+																														class="checkbox-custom-label">No</label>
+																												</div>
+																											</div>
+																											</div>
+				
+
+																												<!-- Balcony -->
+																												<div class="form-group col-md-12">
+																														<label>Balcony</label>
+																														<div class="row">
+														
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="Yes"
+																															id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																														<label for="BalconyBathRoomYes"
+																															class="checkbox-custom-label">Yes</label>
+																													</div>
+														
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="No"
+																															id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																														<label for="BalconyBathRoomNo"
+																															class="checkbox-custom-label">No</label>
+																													</div>
+																												</div>
+																												</div>
+
+																													<!-- Common Area -->
+																													<div class="form-group col-md-12">
+																															<label>Common Area</label>
+																															<div class="row">
+															
+																														<div class="form-group col-md-4">
+																															<input type="radio" class="checkbox-custom" value="Yes"
+																																id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																															<label for="BalconyBathRoomYes"
+																																class="checkbox-custom-label">Yes</label>
+																														</div>
+															
+																														<div class="form-group col-md-4">
+																															<input type="radio" class="checkbox-custom" value="No"
+																																id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																															<label for="BalconyBathRoomNo"
+																																class="checkbox-custom-label">No</label>
+																														</div>
+																													</div>
+																													</div>
+
+																										<!-- Meals Included in the Rent  -->
+																										<div class="form-group col-md-12">
+																												<label>Meals Included in the Rent </label>
+																												<div class="row">
+
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="Yes"
+																													id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																												<label for="BalconyBathRoomYes"
+																													class="checkbox-custom-label">Yes</label>
+																											</div>
+
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="No"
+																													id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																												<label for="BalconyBathRoomNo"
+																													class="checkbox-custom-label">No</label>
+																											</div>
+																										</div>
+																										</div>
+
+																										<!-- Water Availability  -->
+																										<div class="form-group col-md-12">
+																												<label>Water Availability</label>
+																												<div class="row">
+
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="Yes"
+																													id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																												<label for="BalconyBathRoomYes"
+																													class="checkbox-custom-label">Yes</label>
+																											</div>
+
+																											<div class="form-group col-md-4">
+																												<input type="radio" class="checkbox-custom" value="No"
+																													id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																												<label for="BalconyBathRoomNo"
+																													class="checkbox-custom-label">No</label>
+																											</div>
+																										</div>
+																										</div>
+
+																											<!-- Laundry Availability -->
+																											<div class="form-group col-md-12">
+																													<label>Laundry Availability</label>
+																													<div class="row">
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="Yes"
+																														id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																													<label for="BalconyBathRoomYes"
+																														class="checkbox-custom-label">Yes</label>
+																												</div>
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="No"
+																														id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																													<label for="BalconyBathRoomNo"
+																														class="checkbox-custom-label">No</label>
+																												</div>
+																											</div>
+																											</div>
+
+																											<!-- Cooking Availability -->
+																											<div class="form-group col-md-12">
+																													<label>Cooking Availability</label>
+																													<div class="row">
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="Yes"
+																														id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																													<label for="BalconyBathRoomYes"
+																														class="checkbox-custom-label">Yes</label>
+																												</div>
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="No"
+																														id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																													<label for="BalconyBathRoomNo"
+																														class="checkbox-custom-label">No</label>
+																												</div>
+																											</div>
+																											</div>
+
+																											<!-- Guests Allowed -->
+																											<div class="form-group col-md-12">
+																													<label>Guests Allowed</label>
+																													<div class="row">
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="Yes"
+																														id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																													<label for="BalconyBathRoomYes"
+																														class="checkbox-custom-label">Yes</label>
+																												</div>
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="No"
+																														id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																													<label for="BalconyBathRoomNo"
+																														class="checkbox-custom-label">No</label>
+																												</div>
+																											</div>
+																											</div>
+
+																												<!-- Pets Allowed -->
+																												<div class="form-group col-md-12">
+																														<label>Pets Allowed </label>
+																														<div class="row">
+
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="Yes"
+																															id="BalconyBathRoomYes" name="BalconyBathRoomYes">
+																														<label for="BalconyBathRoomYes"
+																															class="checkbox-custom-label">Yes</label>
+																													</div>
+
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="No"
+																															id="BalconyBathRoomNo" name="BalconyBathRoomNo">
+																														<label for="BalconyBathRoomNo"
+																															class="checkbox-custom-label">No</label>
+																													</div>
+																												</div>
+																												</div>
+
+																												<!-- Timing Restrictions  -->
+																												<div class="form-group col-md-12">
+																														<label>Timing Restrictions</label>
+																														<div class="row">
+
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="Yes"
+																															id="TimingRestrictionsYes" name="TimingRestrictionsYes">
+																														<label for="TimingRestrictionsYes"
+																															class="checkbox-custom-label">Yes</label>
+																													</div>
+
+																													<div class="form-group col-md-4">
+																														<input type="radio" class="checkbox-custom" value="No"
+																															id="TimingRestrictionsNo" name="TimingRestrictionsNo">
+																														<label for="TimingRestrictionsNo"
+																															class="checkbox-custom-label">No</label>
+																													</div>
+																												</div>
+																												</div>
+
+																												<div class="form-group col-md-6" id="pg-timerest-val">
+																														<label>Select Time</label>
+																															<input id="timepicker1" type="text" class="form-control" placeholder="Select Time">
+																													</div>
+
+
+																											<!-- Furniture -->
+																											<div class="form-group col-md-6">
+																													<label>Furniture</label>
+																													<select class="form-control" onchange="pgFurnitureChange(this)">
+																														<option value=""> -- Select -- </option>
+																														<option value="Furnished">Furnished</option>
+																														<option value="UnFurnished">UnFurnished</option>
+																														<option value="SemiFurnished">SemiFurnished</option>
+																													</select>
+																												</div>
+
+																												<div class="form-group col-md-6" id="pg-furniture-desc">
+																													<label>Furniture Details</label>
+																														<input type="text" class="form-control" placeholder="Enter Furniture Details">
+																												</div>
+
+																													<!-- Response From -->
+																												<div class="form-group col-md-12">
+																														<label>Furnishing Details</label>
+																														<div class="row">
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Owners"
+																															id="OnlyOwners" name="OnlyOwners">
+																														<label for="OnlyOwners"
+																															class="checkbox-custom-label">Wi-Fi</label>
+																													</div>
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Builders"
+																															id="Onlybuilders" name="Onlybuilders">
+																														<label for="Onlybuilders"
+																															class="checkbox-custom-label">Washing Machine</label>
+																													</div>
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Brokers"
+																															id="OnlyBrokers" name="OnlyBrokers">
+																														<label for="OnlyBrokers"
+																															class="checkbox-custom-label">A.C</label>
+																													</div>
+																													
+																													<div class="form-group col-md-3">
+																															<input type="checkbox" class="" value="Only Brokers"
+																																id="OnlyBrokers" name="OnlyBrokers">
+																															<label for="OnlyBrokers"
+																																class="checkbox-custom-label">Geyser</label>
+																														</div>
+
+																												</div>
+																												</div>
+
+																												<div class="form-group col-md-12">
+																													
+																														<div class="row">
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Owners"
+																															id="OnlyOwners" name="OnlyOwners">
+																														<label for="OnlyOwners"
+																															class="checkbox-custom-label">Cooler</label>
+																													</div>
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Builders"
+																															id="Onlybuilders" name="Onlybuilders">
+																														<label for="Onlybuilders"
+																															class="checkbox-custom-label">Refrigerator</label>
+																													</div>
+														
+																													<div class="form-group col-md-3">
+																														<input type="checkbox" class="" value="Only Brokers"
+																															id="OnlyBrokers" name="OnlyBrokers">
+																														<label for="OnlyBrokers"
+																															class="checkbox-custom-label"> Study Table</label>
+																													</div>
+																													
+																													<div class="form-group col-md-3">
+																															<input type="checkbox" class="" value="Only Brokers"
+																																id="OnlyBrokers" name="OnlyBrokers">
+																															<label for="OnlyBrokers"
+																																class="checkbox-custom-label">Cupboards</label>
+																														</div>
+
+																												</div>
+																												</div>
+
+
+																												<!-- Watchmen Required -->
+																											
+																											<div class="form-group col-md-12">
+																													<label>Watchmen</label>
+																													<div class="row">
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="Yes"
+																														id="TimingRestrictionsYes" name="TimingRestrictionsYes">
+																													<label for="TimingRestrictionsYes"
+																														class="checkbox-custom-label">Yes</label>
+																												</div>
+
+																												<div class="form-group col-md-4">
+																													<input type="radio" class="checkbox-custom" value="No"
+																														id="TimingRestrictionsNo" name="TimingRestrictionsNo">
+																													<label for="TimingRestrictionsNo"
+																														class="checkbox-custom-label">No</label>
+																												</div>
+																											</div>
+																											</div>
+
+																									<!-- CC Cameras Required -->
+																																																						
+																									<div class="form-group col-md-12">
+																											<label>CC Cameras</label>
+																											<div class="row">
+
+																										<div class="form-group col-md-4">
+																											<input type="radio" class="checkbox-custom" value="Yes"
+																												id="TimingRestrictionsYes" name="TimingRestrictionsYes">
+																											<label for="TimingRestrictionsYes"
+																												class="checkbox-custom-label">Yes</label>
+																										</div>
+
+																										<div class="form-group col-md-4">
+																											<input type="radio" class="checkbox-custom" value="No"
+																												id="TimingRestrictionsNo" name="TimingRestrictionsNo">
+																											<label for="TimingRestrictionsNo"
+																												class="checkbox-custom-label">No</label>
+																										</div>
+																									</div>
+																									</div>
+
+																									<div class="form-group col-md-12">
+																											<label>Rent Details</label>
+																										</div>
+
+																										<div class="form-group col-md-6">
+																												<label>Monthly Rent</label>
+																												<input type="text" class="form-control">
+																											</div>
+
+																											<div class="form-group col-md-6">
+																													<label>Security Deposit</label>
+																													<input type="text" class="form-control">
+																												</div>
+
+																												<div class="form-group col-md-6">
+																														<label>Maintenance Charges</label>
+																														<input type="text" class="form-control">
+																													</div>
+
+																													<div class="form-group col-md-6">
+																															<label>Electricity charges</label>
+																															<input type="text" class="form-control">
+																														</div>
+
+																														<div class="form-group col-md-6">
+																																<label>Laundry Charges</label>
+																																<input type="text" class="form-control">
+																															</div>
+
+																															<div class="form-group col-md-6">
+																																	<label>Notice Period</label>
+																																	<select class="form-control">
+																																		<option value=""> -- Select -- </option>
+																																		<option value=" 2 weeks"> 2 weeks</option>
+																																		<option value="1 month">1 month</option>
+																																		<option value="2 months">2 months</option>
+																																	</select>
+																																</div>
+
+
+													</div>
+
+													</div>
 
 												</div>
 
@@ -2048,9 +2822,9 @@
 															<div class="form-group col-md-12" id="req-area">
 																
 																	<div class = "row">
-																		<div class="form-group col-md-6">
+																		<div class="form-group col-md-3">
 																				<label>Area</label>
-																				<select class="form-control">
+																				<select class="form-control" onchange="areaChangeEvent(this)">
 																					<option value=""> -- Select -- </option>
 																					<option value="Sq-ft">Sq-ft</option>
 																					<option value="Sq-yrd">Sq-yrd</option>
@@ -2073,12 +2847,17 @@
 																			</div>
 																
 																<div class="form-group col-md-3">
+																	<label>Area Value</label>
+																	<input type="text" class="form-control" placeholder="Area">
+																</div>
+
+																<div class="form-group col-md-3">
 																	<label>Length</label>
-																	<input type="text" class="form-control" placeholder="Length">
+																	<input type="text" class="form-control" placeholder="Length" id="area-length">
 																</div>
 																<div class="form-group col-md-3">
 																		<label>Breadth</label>
-																	<input type="text" class="form-control" placeholder="Breadth">
+																	<input type="text" class="form-control" placeholder="Breadth" id="area-bredth">
 																</div>
 															</div>
 															</div>
@@ -2497,16 +3276,16 @@
 																					<option value="8">8</option>
 																					<option value="9">9</option>
 																					<option value="10">10</option>
-																					<option value="10">11</option>
-																					<option value="10">12</option>
-																					<option value="10">13</option>
-																					<option value="10">14</option>
-																					<option value="10">15</option>
-																					<option value="10">16</option>
-																					<option value="10">17</option>
-																					<option value="10">18</option>
-																					<option value="10">19</option>
-																					<option value="10">20</option>
+																					<option value="11">11</option>
+																					<option value="12">12</option>
+																					<option value="13">13</option>
+																					<option value="14">14</option>
+																					<option value="15">15</option>
+																					<option value="16">16</option>
+																					<option value="17">17</option>
+																					<option value="18">18</option>
+																					<option value="18">19</option>
+																					<option value="20">20</option>
 																				</select>
 																			</div>
 
@@ -2549,7 +3328,7 @@
 																						</div>
 
 																						<div class="form-group col-md-6">
-																								<label>How Old is the PG</label>
+																								<label>How Old is the PG ?</label>
 																								<select class="form-control">
 																									<option value=""> -- Select -- </option>
 																									<option value="1 Year">1 Year</option>
@@ -2566,11 +3345,16 @@
 																							</div>
 																							<div class="form-group col-md-6">
 																									<label>Available Status</label>
-																									<select class="form-control">
+																									<select class="form-control" onchange="pgAvailableStatusChange(this)">
 																										<option value=""> -- Select -- </option>
 																										<option value="Immediately">Immediately</option>
 																										<option value="Date">Date</option>
 																									</select>
+																								</div>
+
+																								<div class="form-group col-md-6" id="pg-date-val">
+																									<label>Select Date</label>
+																										<input id="datepicker1" type="text" placeholder="Select Date" class="form-control">
 																								</div>
 																								
 																								<div class="form-group col-md-6">
@@ -2780,7 +3564,7 @@
 
 																													<!-- Guests Availability Required -->
 																													<div class="form-group col-md-12">
-																															<label>Guests Availability Required</label>
+																															<label>Guests Allowed Required</label>
 																															<div class="row">
 	
 																														<div class="form-group col-md-4">
@@ -2801,7 +3585,7 @@
 
 																														<!-- Pets Availability Required -->
 																														<div class="form-group col-md-12">
-																																<label>Pets Availability Required</label>
+																																<label>Pets Allowed Required</label>
 																																<div class="row">
 		
 																															<div class="form-group col-md-4">
@@ -2842,20 +3626,25 @@
 																														</div>
 
 																														<div class="form-group col-md-6" id="pg-timerest-val">
-																																<label>Time</label>
-																																<input type="text" class="form-control">
+																																<label>Select Time</label>
+																																	<input id="timepicker1" type="text" class="form-control" placeholder="Select Time">
 																															</div>
 
 
 																													<!-- Furniture -->
 																													<div class="form-group col-md-6">
 																															<label>Furniture</label>
-																															<select class="form-control">
+																															<select class="form-control" onchange="pgFurnitureChange(this)">
 																																<option value=""> -- Select -- </option>
 																																<option value="Furnished">Furnished</option>
 																																<option value="UnFurnished">UnFurnished</option>
 																																<option value="SemiFurnished">SemiFurnished</option>
 																															</select>
+																														</div>
+
+																														<div class="form-group col-md-6" id="pg-furniture-desc">
+																															<label>Furniture Details</label>
+																																<input type="text" class="form-control" placeholder="Enter Furniture Details">
 																														</div>
 
 																															<!-- Response From -->
@@ -3171,6 +3960,9 @@
 
 	<script src="assets/js/manajaga.js"></script>
 	<script src="assets/js/multi-step.js"></script>
+	
+
+
 	<!-- ============================================================== -->
 	<!-- This page plugins -->
 	<!-- ============================================================== -->

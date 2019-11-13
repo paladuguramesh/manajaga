@@ -3092,12 +3092,12 @@ nav .menu li ul li a {
 }
 
 
-nav .menu li a:hover {
+nav .menu  a:hover {
 	color:#fff !important; 
 }
 
-nav .menu li ul li a:hover {
-	color:#606c8e;
+nav .menu .dropdown-menu li a:hover {
+    
 }
 
 .log-icon a{
