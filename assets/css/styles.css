@@ -8464,6 +8464,7 @@ a.blue2-theme {
  
 .pull-right{padding-right:10px;padding-left:0;text-align:right;border-left:0}
 
+.mov-left{padding-right:10px;padding-left:10px;text-align:left;border-left:0; float: left; margin-right: 20px;}
 .mov-right{padding-right:10px;padding-left:10px;text-align:right;border-left:0; float: right; margin-right: 20px;}
  
 .pull-left{padding-right:10px}
@@ -8477,4 +8478,10 @@ a.blue2-theme {
 .country-label {
 	color: #ffffff;
 }	
-	
+    
+.btn.btn-theme-orange {
+    color:#ffffff;
+    background:#f08804;
+    border-radius: 4px;
+	margin-bottom:5px;
+}
