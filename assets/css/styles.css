@@ -5990,16 +5990,16 @@ span.view-pr {
     color: #ed3271;
 }
 .prt-type {
-    font-size:13px;
+    font-size:15px;
     color: #ffffff;
     font-weight:500;
     background:#333333;
-    padding: 4px 12px;
+    padding: 8px 12px;
     border-radius: 2px;
     margin-left: 10px;
 }
 span.prt-type.rent {
-    background: #3ebd43;
+    background: #ff8000; /* 3ebd43 */
     color: #ffffff;
 }
 span.prt-type.sale {
@@ -8464,8 +8464,8 @@ a.blue2-theme {
  
 .pull-right{padding-right:10px;padding-left:0;text-align:right;border-left:0}
 
-.mov-left{padding-right:10px;padding-left:10px;text-align:left;border-left:0; float: left; margin-right: 20px;}
-.mov-right{padding-right:10px;padding-left:10px;text-align:right;border-left:0; float: right; margin-right: 20px;}
+.mov-left{padding:10px;text-align:left; float: left; margin-left: -20px;}
+.mov-right{padding:10px;text-align:right;float: right;}
  
 .pull-left{padding-right:10px}
 .pull-left{float:left!important}
