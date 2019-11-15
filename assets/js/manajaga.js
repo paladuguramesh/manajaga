@@ -149,6 +149,9 @@ $("#Sale").change(function () {
     $("#post-rent").hide();
     $("#post-pg").hide();
 
+    $("#post-sale-rent").show();
+    
+
     InitializePostSaleRent();
 });
 
@@ -165,6 +168,8 @@ $("#Rent").change(function () {
     $("#post-rent").show();
     $("#post-pg").hide();
 
+    $("#post-sale-rent").show();
+
     InitializePostSaleRent();
 });
 
@@ -180,6 +185,9 @@ $("#PG").change(function () {
     $("#post-sale").hide();
     $("#post-rent").hide();
     $("#post-pg").show();
+
+    $("#post-sale-rent").hide();
+
 });
 /*** Property Details Post***/
 

@@ -294,7 +294,7 @@
 									<div class="pr-price-into">
 										<h4>Single/2bhk/3bhk</h4>
 										<h2>&#8377; 50,000 <i>/ monthly</i> 
-											<span class="prt-type rent" id="propert_for">For Rental</span>
+											<span class="prt-type rent" id="propert_for"></span>
 										</h2>
 										<span><i class="lni-map-marker"></i> 778 Country St. Panama City, FL</span>
 									</div>
@@ -757,10 +757,10 @@
 
 			
 			$( document ).ready(function() {
-				// var urlParams = new URLSearchParams(window.location.search);
-    			// var type = urlParams.get('type');
+				var urlParams = new URLSearchParams(window.location.search);
+    			var type = urlParams.get('type');
 				
-				// if(type == 'pg' || 'rent' || 'buy') {
+				if(type == 'pg') {
 
 					$("#propert_for").text('For Paying Guest');
 
@@ -804,7 +804,63 @@
 					$("#property-ameneties-block").append('<li>Watchmen</li>');
 					$("#property-ameneties-block").append('<li>CC Cameras</li>');
 
-				// }
+				}
+				
+				else if(type == 'rent'){
+
+					$("#propert_for").text('For Rent');
+
+					$("#property_title").text("Rent");
+					$("#property_type").text('Individual House');
+
+					// Property Info
+					$("#property-info-block").append('<li><strong>Total Floors</strong>5</li>');
+					$("#property-info-block").append('<li><strong>Floor No</strong>3</li>');
+					$("#property-info-block").append('<li><strong>How Old is the Individual House</strong>2 years</li>');
+					$("#property-info-block").append('<li><strong>Available Status</strong>Immediately</li>');
+					$("#property-info-block").append('<li><strong>No.Of Rooms in Individual House</strong>25</li>');
+					$("#property-info-block").append('<li><strong>Furniture</strong>Furnished</li>');
+					$("#property-info-block").append('<li><strong>Notice Period</strong>1 Month</li>');
+
+					// Ameneties
+					$("#property-ameneties-block").append('<li>Attached BathRoom</li>');
+					$("#property-ameneties-block").append('<li>Common BathRoom</li>');
+					$("#property-ameneties-block").append('<li>Balcony</li>');
+					$("#property-ameneties-block").append('<li>Common Area</li>');
+					$("#property-ameneties-block").append('<li>Water Availability</li>');
+					$("#property-ameneties-block").append('<li>Pets Allowed</li>');
+					$("#property-ameneties-block").append('<li>Watchmen</li>');
+					$("#property-ameneties-block").append('<li>CC Cameras</li>');
+
+				}
+
+				else if(type == 'sale'){
+
+					$("#propert_for").text('For Sale');
+
+					$("#property_title").text("Individual House for Sale");
+					$("#property_type").text('Individual House');
+
+					// Property Info
+					$("#property-info-block").append('<li><strong>Total Floors</strong>1</li>');
+					$("#property-info-block").append('<li><strong>BedRooms</strong>3</li>');
+					$("#property-info-block").append('<li><strong>BathRooms</strong>3</li>');
+					$("#property-info-block").append('<li><strong>Balconies</strong>2</li>');
+					$("#property-info-block").append('<li><strong>Other Rooms</strong>2</li>');
+					$("#property-info-block").append('<li><strong>Furniture</strong>Furnished</li>');
+					$("#property-info-block").append('<li><strong>Area</strong>3,000 sq.ft</li>');
+					$("#property-info-block").append('<li><strong>Building Age</strong>5 Years</li>');
+					$("#property-info-block").append('<li><strong>Trade Type</strong>Resale</li>');
+					$("#property-info-block").append('<li><strong>Possession</strong>Ready to Move</li>');
+					$("#property-info-block").append('<li><strong>Facing</strong>North</li>');
+
+					// Ameneties
+					$("#property-ameneties-block").append('<li>Parking Available</li>');
+					$("#property-ameneties-block").append('<li>Gated Community</li>');
+
+				}
+
+
 			});
 
 		</script>

@@ -13990,7 +13990,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .ti-close:before {
-    content: "\e646"
+    content: "\e646";
 }
 
 .ti-clip:before {

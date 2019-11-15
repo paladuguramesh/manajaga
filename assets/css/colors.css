@@ -150,6 +150,14 @@
 	color:#ffffff;
 }
 
+span.mod-close{
+	color:#000000 !important;
+}
+
+.dw-proprty-info li{
+	color:#797d8a !important;
+}
+
 .green-skin .pagination>.active>a, .green-skin .pagination>.active>a:focus, .green-skin .pagination>.active>a:hover, .green-skin .pagination>.active>span, .green-skin .pagination>.active>span:focus, .green-skin .pagination>.active>span:hover, .green-skin .pagination>li>a:focus, .green-skin .pagination>li>a:hover,
 .green-skin .pagination li:first-child a,
 .green-skin .range-slider .ui-slider .ui-slider-handle,
