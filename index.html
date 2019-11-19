@@ -4311,12 +4311,32 @@
 
 														<div class="form-group col-md-12" id="gallery-section">
 															<label>Upload Gallery</label>
-															<form action="http://codeminifier.com/upload-target"
-																class="dropzone dz-clickable primary-dropzone">
-																<div class="dz-default dz-message">
-																	<i class="ti-gallery"></i>
-																	<span>Drag & Drop To Change Logo</span>
-																</div>
+															<form>
+															
+																<div class="fieldset-content">
+														            <div class="tableresponsive mt-3">
+														              <table id="add_new_coulmn_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+														                <thead>
+														                  <tr>
+														                  	<th>Choose File</th>
+														                    <th>Image Title</th>
+														                    <th></th>
+														                  </tr>
+														                </thead>
+														                <tbody>
+														                  <tr>
+														                  	<td align="center"><input type="file" name="file"></td>
+														                    <td><input type="text" class="form-control" placeholder="Title"></td>
+														                     <td align="center" valign="middle"><i class="fa fa-trash-alt text-danger delete_icon delete"></i></td>
+														                  </tr>
+														                </tbody>
+														              </table>
+														            </div>
+														            <div> 
+														            	<a id="addrow" class="btn btn-theme-orange mov-right" style="color: white;">Add Row</a> 
+														            	</div>
+														          </div>
+															
 															</form>
 														</div>
 
@@ -4454,7 +4474,7 @@
 
 		$('#dropdownMenuButton').mouseover(function () {
 			$('#citylistheader').addClass("show");
-		})
+		});
 
 		$('#dropdownMenuButton').mouseout(function () {
 			t = setTimeout(function () {
@@ -4467,7 +4487,19 @@
 			}).on('mouseleave', function () {
 				$('#citylistheader').removeClass("show");
 			})
-		})
+		});
+		
+		 $("#addrow").click(function(){
+			 $("#add_new_coulmn_table").append('<tr> <td align="center"><input type="file" name="file"></td><td><input type="text" class="form-control" placeholder="Title"></td><td align="center" valign="middle"><i class="fa fa-trash-alt text-danger delete_icon delete"></i></td></tr>');
+		  });
+	         
+       $(".delete").on('click',function(){
+            $(this).parent().parent().remove();
+        });
+        
+        $("#add_new_coulmn_table").on('click','.delete',function(){
+            $(this).parent().parent().remove();
+        });
 
 	</script>
 
