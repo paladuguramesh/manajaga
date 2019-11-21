@@ -7932,9 +7932,9 @@ footer.skin-dark-footer ul.footer-bottom-social li a:hover, footer.skin-dark-foo
 	
 	.stats-list{
 		text-align: center;
-		    margin-top: 18px;
-	}
-	
+        margin-top: 18px;
+    }
+    
 	nav .nav-header .brand {
 		margin: 0 auto 10px;
 		float: none;
@@ -8482,7 +8482,7 @@ a.blue2-theme {
 	}
 
 .country-label {
-	color: #ffffff;
+	color: #022140;
 }	
     
 .btn.btn-theme-orange {
@@ -9224,4 +9224,10 @@ fullpage .wrapper #offerChart .bosGrid .bosGridCol>div {
     letter-spacing: 1px;
     line-height: 1;
     height: 14px;
+}
+
+.current-city{
+    left: 70px;
+    position: absolute;
+    top: 90px;
 }
